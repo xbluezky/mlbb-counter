@@ -50,7 +50,7 @@
  "haas_claws": {
   "name": "Haas' Claws",
   "cat": "attack",
-  "desc": "Lifesteal + crit",
+  "desc": "Crit + lifesteal tinggi",
   "img": "https://mlbbdex.com/visuels/objets/haas-claws.webp"
  },
  "blade_of_despair": {
@@ -58,12 +58,6 @@
   "cat": "attack",
   "desc": "Physical attack besar, bonus ke target HP rendah",
   "img": "https://mlbbdex.com/visuels/objets/blade-of-despair.webp"
- },
- "scarlet_phantom": {
-  "name": "Scarlet Phantom",
-  "cat": "attack",
-  "desc": "Crit chance + attack speed",
-  "img": "https://mlbbdex.com/visuels/objets/scarlet-phantom.webp"
  },
  "golden_staff": {
   "name": "Golden Staff",
@@ -80,19 +74,19 @@
  "demon_hunter_sword": {
   "name": "Demon Hunter Sword",
   "cat": "attack",
-  "desc": "Damage tambahan berbasis HP target, anti tank",
+  "desc": "Basic attack nambah damage 8% HP target saat ini",
   "img": "https://mlbbdex.com/visuels/objets/demon-hunter-sword.webp"
  },
  "malefic_roar": {
   "name": "Malefic Roar",
   "cat": "attack",
-  "desc": "Physical penetration, makin kuat ke def tinggi",
+  "desc": "Physical pen, makin besar ke lawan def tinggi",
   "img": "https://mlbbdex.com/visuels/objets/malefic-roar.webp"
  },
  "sea_halberd": {
   "name": "Sea Halberd",
   "cat": "attack",
-  "desc": "Anti-heal fisik: potong regen & lifesteal target",
+  "desc": "Anti-heal fisik: potong shield & regen target, bonus damage ke lawan HP tebal",
   "img": "https://mlbbdex.com/visuels/objets/sea-halberd.webp"
  },
  "hunter_strike": {
@@ -116,14 +110,8 @@
  "war_axe": {
   "name": "War Axe",
   "cat": "attack",
-  "desc": "Damage naik selama combat panjang",
+  "desc": "HP + attack bertumpuk saat combat, true damage di full stack",
   "img": "https://mlbbdex.com/visuels/objets/war-axe.webp"
- },
- "bloodlust_axe": {
-  "name": "Bloodlust Axe",
-  "cat": "attack",
-  "desc": "Spell vamp untuk skill fisik",
-  "img": "https://mlbbdex.com/visuels/objets/bloodlust-axe.webp"
  },
  "great_dragon_spear": {
   "name": "Great Dragon Spear",
@@ -134,13 +122,13 @@
  "rose_gold_meteor": {
   "name": "Rose Gold Meteor",
   "cat": "attack",
-  "desc": "Shield saat HP rendah vs magic",
+  "desc": "Lifesteal + shield besar saat HP di bawah 30%",
   "img": "https://mlbbdex.com/visuels/objets/rose-gold-meteor.webp"
  },
  "wind_of_nature": {
   "name": "Wind of Nature",
   "cat": "attack",
-  "desc": "Aktif: kebal damage fisik sebentar",
+  "desc": "Aktif: kebal damage fisik 2 detik (1 detik kalau bukan Marksman)",
   "img": "https://mlbbdex.com/visuels/objets/wind-of-nature.webp"
  },
  "clock_of_destiny": {
@@ -176,13 +164,13 @@
  "divine_glaive": {
   "name": "Divine Glaive",
   "cat": "magic",
-  "desc": "Magic pen persen, anti magic def tinggi",
+  "desc": "Magic pen 40%, makin besar ke lawan magic def tinggi",
   "img": "https://mlbbdex.com/visuels/objets/divine-glaive.webp"
  },
  "glowing_wand": {
   "name": "Glowing Wand",
   "cat": "magic",
-  "desc": "Burn berbasis HP target",
+  "desc": "Burn %HP maks target + anti-heal (potong shield & regen)",
   "img": "https://mlbbdex.com/visuels/objets/glowing-wand.webp"
  },
  "ice_queen_wand": {
@@ -221,100 +209,112 @@
   "desc": "Attack speed untuk hero magic basic attack",
   "img": "https://mlbbdex.com/visuels/objets/feather-of-heaven.webp"
  },
- "necklace_of_durance": {
-  "name": "Necklace of Durance",
-  "cat": "magic",
-  "desc": "Anti-heal magic: potong regen & spell vamp",
-  "img": "https://mlbbdex.com/visuels/objets/necklace-of-durance.webp"
- },
  "winter_crown": {
   "name": "Winter Crown",
   "cat": "magic",
-  "desc": "Aktif: membeku, kebal semua damage sebentar",
+  "desc": "Aktif: membeku, kebal semua damage 2 detik",
   "img": "https://mlbbdex.com/visuels/objets/winter-crown.webp"
  },
  "flask_of_the_oasis": {
   "name": "Flask of the Oasis",
   "cat": "magic",
-  "desc": "Tambah efek heal & shield ke teman",
+  "desc": "Perkuat heal; shield darurat ke teman HP rendah",
   "img": "https://mlbbdex.com/visuels/objets/flask-of-the-oasis.webp"
- },
- "athenas_shield": {
-  "name": "Athena's Shield",
-  "cat": "defense",
-  "desc": "Magic def + shield saat kena burst magic",
-  "img": "https://mlbbdex.com/visuels/objets/athena-s-shield.webp"
  },
  "radiant_armor": {
   "name": "Radiant Armor",
   "cat": "defense",
-  "desc": "Magic def menumpuk saat terus kena magic",
+  "desc": "HP + magic def yang menumpuk saat terus kena magic",
   "img": "https://mlbbdex.com/visuels/objets/radiant-armor.webp"
  },
  "antique_cuirass": {
   "name": "Antique Cuirass",
   "cat": "defense",
-  "desc": "Physical def + kurangi attack lawan yang mukul",
+  "desc": "HP + physical def, kurangi damage fisik penyerang",
   "img": "https://mlbbdex.com/visuels/objets/antique-cuirass.webp"
  },
  "blade_armor": {
   "name": "Blade Armor",
   "cat": "defense",
-  "desc": "Physical def + pantulkan damage basic attack",
+  "desc": "Physical def + pantulkan damage basic attack, kurangi crit damage",
   "img": "https://mlbbdex.com/visuels/objets/blade-armor.webp"
  },
  "dominance_ice": {
   "name": "Dominance Ice",
   "cat": "defense",
-  "desc": "Anti-heal aura + turunkan attack speed lawan sekitar",
+  "desc": "Def ganda + aura anti-heal, makin tebal dikelilingi lawan",
   "img": "https://mlbbdex.com/visuels/objets/dominance-ice.webp"
  },
  "brute_force_breastplate": {
   "name": "Brute Force Breastplate",
   "cat": "defense",
-  "desc": "Def + movement bertumpuk saat combat",
+  "desc": "HP + def, attack & movement bertumpuk saat combat",
   "img": "https://mlbbdex.com/visuels/objets/brute-force-breastplate.webp"
- },
- "twilight_armor": {
-  "name": "Twilight Armor",
-  "cat": "defense",
-  "desc": "Kurangi damage dari pukulan besar",
-  "img": "https://mlbbdex.com/visuels/objets/twilight-armor.webp"
  },
  "oracle": {
   "name": "Oracle",
   "cat": "defense",
-  "desc": "Naikkan heal & shield yang diterima",
+  "desc": "Def ganda, naikkan shield & regen yang diterima",
   "img": "https://mlbbdex.com/visuels/objets/oracle.webp"
  },
  "thunder_belt": {
   "name": "Thunder Belt",
   "cat": "defense",
-  "desc": "HP + def, skill berikutnya nambah damage & slow",
+  "desc": "Def ganda, basic attack berkala true damage + slow",
   "img": "https://mlbbdex.com/visuels/objets/thunder-belt.webp"
  },
  "guardian_helmet": {
   "name": "Guardian Helmet",
   "cat": "defense",
-  "desc": "HP besar + regen cepat",
+  "desc": "HP sangat besar + regen cepat di luar combat",
   "img": "https://mlbbdex.com/visuels/objets/guardian-helmet.webp"
  },
  "queens_wings": {
   "name": "Queen's Wings",
   "cat": "defense",
-  "desc": "Kurangi damage + spell vamp saat HP rendah",
+  "desc": "Spell vamp + damage reduction saat HP di bawah 40%",
   "img": "https://mlbbdex.com/visuels/objets/queen-s-wings.webp"
  },
  "immortality": {
   "name": "Immortality",
   "cat": "defense",
-  "desc": "Bangkit sekali setelah mati",
+  "desc": "Bangkit sekali setelah mati (cooldown panjang)",
   "img": "https://mlbbdex.com/visuels/objets/immortality.webp"
  },
  "cursed_helmet": {
   "name": "Cursed Helmet",
   "cat": "defense",
-  "desc": "Magic def + burn aura (bagus buat clear wave)",
+  "desc": "HP besar + aura burn, turunkan def lawan sekitar",
   "img": "https://mlbbdex.com/visuels/objets/cursed-helmet.webp"
+ },
+ "valkyries_shield": {
+  "name": "Valkyrie's Shield",
+  "cat": "defense",
+  "desc": "Magic def + kurangi damage magic 25% beberapa detik saat kena",
+  "img": "https://mlbbdex.com/visuels/objets/valkyrie-s-shield.webp"
+ },
+ "chastise_pauldron": {
+  "name": "Chastise Pauldron",
+  "cat": "defense",
+  "desc": "Physical def + turunkan attack speed penyerang, heal saat HP kritis",
+  "img": "https://mlbbdex.com/visuels/objets/chastise-pauldron.webp"
+ },
+ "malefic_gun": {
+  "name": "Malefic Gun",
+  "cat": "attack",
+  "desc": "Physical pen + range basic attack lebih jauh",
+  "img": "https://mlbbdex.com/visuels/objets/malefic-gun.webp"
+ },
+ "sky_piercer": {
+  "name": "Sky Piercer",
+  "cat": "attack",
+  "desc": "Eksekusi lawan HP sangat rendah, makin kuat tiap kill",
+  "img": "https://mlbbdex.com/visuels/objets/sky-piercer.webp"
+ },
+ "wishing_lantern": {
+  "name": "Wishing Lantern",
+  "cat": "magic",
+  "desc": "Damage tambahan berbasis HP saat ini, bagus lawan tanky",
+  "img": "https://mlbbdex.com/visuels/objets/wishing-lantern.webp"
  }
 }

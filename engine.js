@@ -7,10 +7,9 @@
 
   // Item yang saling menggantikan: cukup satu per grup.
   var GROUPS = {
-    antiheal: ["sea_halberd", "necklace_of_durance", "dominance_ice"],
+    antiheal: ["sea_halberd", "glowing_wand", "dominance_ice"],
     immune: ["wind_of_nature", "winter_crown"],
-    magicdef: ["athenas_shield", "radiant_armor"],
-    physdef: ["antique_cuirass", "blade_armor", "twilight_armor"]
+    magicdef: ["valkyries_shield", "radiant_armor"]
   };
   function groupOf(id) {
     for (var g in GROUPS) if (GROUPS[g].indexOf(id) >= 0) return g;
@@ -18,8 +17,8 @@
   }
 
   // Item defensif (dihitung ke batas slot defensif untuk carry).
-  var DEF_ITEMS = ["athenas_shield", "radiant_armor", "antique_cuirass", "blade_armor", "dominance_ice",
-    "brute_force_breastplate", "twilight_armor", "oracle", "thunder_belt", "guardian_helmet", "immortality",
+  var DEF_ITEMS = ["valkyries_shield", "radiant_armor", "antique_cuirass", "blade_armor", "dominance_ice",
+    "brute_force_breastplate", "chastise_pauldron", "oracle", "thunder_belt", "guardian_helmet", "immortality",
     "queens_wings", "wind_of_nature", "winter_crown", "rose_gold_meteor"];
 
   function profile(enemies) {
@@ -57,35 +56,36 @@
     var heal = p.heal + p.shield;
     return [
       { id: "antiheal", score: heal >= 1.5 ? 1 + heal * 0.9 : 0,
-        item: { carry_phys: "sea_halberd", bruiser_phys: "sea_halberd", carry_magic: "necklace_of_durance",
-          bruiser_magic: "necklace_of_durance", frontline: "dominance_ice", support: "dominance_ice" },
+        item: { carry_phys: "sea_halberd", bruiser_phys: "sea_halberd", carry_magic: "glowing_wand",
+          bruiser_magic: "glowing_wand", frontline: "dominance_ice", support: "dominance_ice" },
         why: "Lawan punya banyak heal/shield/lifesteal. Anti-heal motong sustain mereka." },
       { id: "pen", score: p.tank >= 1.5 ? p.tank * 1.0 : 0,
         item: { carry_phys: ["malefic_roar", "demon_hunter_sword"], bruiser_phys: ["malefic_roar"],
-          carry_magic: ["divine_glaive", "glowing_wand"], bruiser_magic: ["divine_glaive"] },
+          carry_magic: ["divine_glaive", "wishing_lantern"], bruiser_magic: ["divine_glaive"] },
         why: "Lawan tebal (banyak tank). Butuh penetration atau damage berbasis HP." },
       { id: "magicburst", score: p.burstM >= 1.5 ? p.burstM * 1.1 + p.magicShare : 0,
-        item: { all: "athenas_shield" },
-        why: "Banyak burst magic. Athena's Shield nahan combo sekali tembak." },
+        item: { all: "valkyries_shield" },
+        why: "Banyak burst magic. Valkyrie's Shield motong damage magic 25% pas lagi dikombo." },
       { id: "magicdps", score: p.dpsM >= 1.5 ? p.dpsM * 0.9 + p.magicShare : 0,
         item: { frontline: "radiant_armor", support: "radiant_armor", bruiser_phys: "radiant_armor",
-          bruiser_magic: "radiant_armor", carry_phys: "athenas_shield", carry_magic: "athenas_shield" },
+          bruiser_magic: "radiant_armor", carry_phys: "valkyries_shield", carry_magic: "valkyries_shield" },
         why: "Damage magic lawan datang terus-menerus. Magic def yang menumpuk lebih awet." },
       { id: "physburst", score: (p.burstP + p.dive * 0.6) >= 2 ? p.burstP + p.dive * 0.6 : 0,
-        item: { carry_phys: "wind_of_nature", carry_magic: "winter_crown", bruiser_phys: "antique_cuirass",
+        item: { carry_phys: "wind_of_nature", carry_phys_nonmm: "rose_gold_meteor", carry_magic: "winter_crown", bruiser_phys: "antique_cuirass",
           bruiser_magic: "antique_cuirass", frontline: "antique_cuirass", support: "antique_cuirass" },
         why: "Banyak assassin/diver fisik. Item aktif kebal atau physical def biar nggak kena one-shot." },
       { id: "crit", score: p.crit >= 1.5 ? p.crit * 1.0 : 0,
-        item: { carry_phys: "wind_of_nature", carry_magic: "winter_crown", bruiser_phys: "blade_armor",
-          bruiser_magic: "blade_armor", frontline: ["blade_armor", "dominance_ice"], support: "dominance_ice" },
-        why: "Lawan mengandalkan crit/attack speed. Blade Armor & Dominance Ice paling efektif lawan basic attack." },
+        item: { carry_phys: "wind_of_nature", carry_phys_nonmm: "rose_gold_meteor", carry_magic: "winter_crown",
+          bruiser_phys: ["chastise_pauldron", "blade_armor"], bruiser_magic: ["chastise_pauldron", "blade_armor"],
+          frontline: ["chastise_pauldron", "blade_armor"], support: "dominance_ice" },
+        why: "Lawan mengandalkan crit/attack speed. Chastise Pauldron motong attack speed penyerang, Blade Armor mantulin basic attack." },
       { id: "physheavy", score: p.physShare >= 0.62 ? p.physShare * 2.2 : 0,
         item: { frontline: "antique_cuirass", support: "antique_cuirass", bruiser_phys: "antique_cuirass",
           bruiser_magic: "antique_cuirass" },
         why: "Mayoritas damage lawan fisik." },
       { id: "magicheavy", score: p.magicShare >= 0.55 ? p.magicShare * 2.2 : 0,
-        item: { frontline: "athenas_shield", support: "athenas_shield", bruiser_phys: "athenas_shield",
-          bruiser_magic: "athenas_shield" },
+        item: { frontline: "valkyries_shield", support: "valkyries_shield", bruiser_phys: "valkyries_shield",
+          bruiser_magic: "valkyries_shield" },
         why: "Mayoritas damage lawan magic." },
       { id: "fed", score: p.fed > 0 ? 1.4 + p.fed * 1.3 : 0,
         item: { all: "immortality" },
@@ -93,8 +93,10 @@
     ];
   }
 
-  function pickItem(rule, kind) {
-    var it = rule.item[kind] || rule.item.all;
+  function pickItem(rule, kind, me) {
+    // Wind of Nature cuma 1 detik kalau bukan Marksman: carry fisik non-MM pakai alternatif.
+    var isMM = me && (me.roles || [])[0] === "Marksman";
+    var it = (kind === "carry_phys" && !isMM && rule.item.carry_phys_nonmm) || rule.item[kind] || rule.item.all;
     if (!it) return [];
     return Array.isArray(it) ? it : [it];
   }
@@ -150,7 +152,7 @@
     // Pass 1: item bawaan yang sudah meng-counter dikunci dulu, supaya tidak tertimpa swap.
     var pending = [];
     cands.forEach(function (r) {
-      var list = pickItem(r, kind);
+      var list = pickItem(r, kind, me);
       if (!list.length) return;
       for (var k = 0; k < list.length; k++) {
         var at = slotWith(list[k]);
@@ -168,7 +170,7 @@
 
     // Pass 2: swap slot fleksibel untuk counter yang belum tertutup.
     pending.forEach(function (r) {
-      var list = pickItem(r, kind);
+      var list = pickItem(r, kind, me);
       var done = false;
       list.forEach(function (id) {
         if (done) return;
