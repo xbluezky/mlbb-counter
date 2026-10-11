@@ -8,6 +8,7 @@ ke data/*.json milik Counter Build.
     * menambah hero baru (ditandai review=true, tags default dari role),
     * mengisi role/lane kalau kosong,
     * menandai item kurasi yang sudah tidak ada di katalog (kemungkinan dihapus/di-rename patch),
+    * mengisi URL ikon hero & item yang belum ada (di-hotlink dari MLBBDex),
     * mencatat versi patch & waktu sync di meta.json.
 - Tulis atomik + backup .bak, jadi web tidak pernah membaca file setengah jadi.
 
@@ -63,7 +64,21 @@ def log(*a):
 
 
 def norm(s):
-    return re.sub(r"[^a-z0-9]", "", str(s).lower())
+    # "Haas's Claws" dan "Haas' Claws" dianggap sama.
+    s = str(s).lower().replace("'s", " ").replace("’s", " ")
+    return re.sub(r"[^a-z0-9]", "", s)
+
+
+# Path gambar mengikuti konvensi MLBBDex (src/lib di repo achedon12/mlbb).
+def hero_img(api_slug):
+    return f"{BASE}/visuels/heros/{api_slug}/icone.webp"
+
+
+def item_img(api_slug):
+    return f"{BASE}/visuels/objets/{api_slug}.webp"
+
+
+DMG_MAP = {"physical": "phys", "phyiscal": "phys", "magic": "magic", "magical": "magic", "mixed": "mixed"}
 
 
 def slug(s):
@@ -167,6 +182,7 @@ def merge_heroes(local, remote):
             continue
         roles = [ROLE_NAMES[x.lower()] for x in as_list(pick(r, "roles", "role", "classes")) if x.lower() in ROLE_NAMES]
         lanes = [LANE_MAP[x.lower()] for x in as_list(pick(r, "lanes", "lane", "voies", "positions")) if x.lower() in LANE_MAP]
+        api_slug = pick(r, "slug") or slug(name)
         h = by_norm.get(norm(name))
         if h:
             changed = False
@@ -174,15 +190,25 @@ def merge_heroes(local, remote):
                 h["roles"] = roles; changed = True
             if lanes and not h.get("lanes"):
                 h["lanes"] = sorted(set(lanes), key=lanes.index); changed = True
+            if not h.get("img"):
+                h["img"] = hero_img(api_slug); changed = True
             if changed:
                 updated.append(name)
             continue
         main = roles[0] if roles else "Fighter"
         dmg, tags, arch = ROLE_DEFAULTS.get(main, ROLE_DEFAULTS["Fighter"])
+        # Tipe damage resmi ada di endpoint detail (cuma dipanggil untuk hero baru).
+        detail = get_json(f"/api/v1/heroes/{api_slug}") or {}
+        dt_raw = str(pick(detail.get("data") or {}, "damageType") or "").lower()
+        if dt_raw in DMG_MAP:
+            dmg = DMG_MAP[dt_raw]
+            if dmg == "magic" and arch in ("phys_assassin", "fighter_phys", "mm_crit"):
+                arch = {"phys_assassin": "mage_assassin", "fighter_phys": "magic_bruiser", "mm_crit": "mm_magic"}[arch]
         new = {
             "id": slug(name), "name": name,
             "lanes": lanes or ["exp"], "roles": roles or ["Fighter"],
             "dmg": dmg, "tags": list(tags), "arch": arch,
+            "img": hero_img(api_slug),
             "source": "sync", "review": True,
         }
         local.append(new)
@@ -193,13 +219,21 @@ def merge_heroes(local, remote):
 
 
 def check_items(items, remote):
-    names = {norm(text_of(pick(r, "name", "nom", "title"))) for r in remote}
-    names.discard("")
-    if len(names) < 30:
+    """Isi URL ikon item yang belum ada, dan kembalikan item kurasi yang tidak ada di katalog."""
+    by_name = {}
+    for r in remote:
+        n = norm(text_of(pick(r, "name", "nom", "title")))
+        if n:
+            by_name[n] = r
+    for it in items.values():
+        r = by_name.get(norm(it["name"]))
+        if r and not it.get("img"):
+            it["img"] = item_img(pick(r, "slug") or slug(it["name"]))
+    if len(by_name) < 30:
         # Katalog terlalu kecil = kemungkinan respons parsial; jangan tandai item hilang.
-        log(f"katalog item cuma {len(names)} entri, cek item dilewati")
+        log(f"katalog item cuma {len(by_name)} entri, cek item dilewati")
         return []
-    return [iid for iid, it in items.items() if norm(it["name"]) not in names]
+    return [iid for iid, it in items.items() if norm(it["name"]) not in by_name]
 
 
 def latest_patch(remote):
@@ -260,6 +294,7 @@ def main():
         log("dry-run: tidak ada file ditulis")
         return 0
     write_atomic(os.path.join(d, "heroes.json"), heroes)
+    write_atomic(os.path.join(d, "items.json"), items)
     write_atomic(os.path.join(d, "meta.json"), meta)
     log("selesai")
     return 0

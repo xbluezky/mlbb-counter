@@ -35,10 +35,22 @@
     var w = name.replace(/[^A-Za-z0-9 .'-]/g, "").split(/[\s.-]+/).filter(Boolean);
     return (w.length > 1 ? w[0][0] + w[1][0] : name.slice(0, 2)).toUpperCase();
   }
+  // Gambar di-hotlink; inisial tetap ada di bawahnya sebagai fallback kalau gambar gagal dimuat.
+  function pic(src) {
+    return src ? '<img class="pic" src="' + esc(src) + '" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">' : "";
+  }
   function avatar(h) {
     var c = h.dmg === "phys" ? "p" : h.dmg === "magic" ? "m" : "x";
-    return '<span class="av ' + c + '" aria-hidden="true">' + esc(initials(h.name)) + "</span>";
+    return '<span class="av ' + c + '" aria-hidden="true">' + esc(initials(h.name)) + pic(h.img) + "</span>";
   }
+  function itemIcon(it) {
+    var c = { attack: "p", magic: "m", defense: "d", boots: "b" }[it.cat] || "b";
+    return '<span class="ic ' + c + '" aria-hidden="true">' + esc(initials(it.name)) + pic(it.img) + "</span>";
+  }
+  document.addEventListener("error", function (ev) {
+    var t = ev.target;
+    if (t && t.tagName === "IMG" && t.classList.contains("pic")) t.remove();
+  }, true);
   function dmgLabel(h) { return h.dmg === "phys" ? "Fisik" : h.dmg === "magic" ? "Magic" : "Campuran"; }
   function itemName(id) { return (DATA.items[id] && DATA.items[id].name) || id; }
 
@@ -89,7 +101,8 @@
       var it = DATA.items[s.id] || { name: s.id, desc: "" };
       var was = s.status === "counter" && s.base !== s.id ? '<span class="was">ganti <s>' + esc(itemName(s.base)) + "</s></span>" : "";
       return '<li class="slot ' + s.status + '"><span class="no"><span>' + (i + 1) + '</span><span class="st ' + s.status + '">' + STL[s.status] + "</span></span>" +
-        '<span class="it">' + esc(it.name) + '</span><span class="ds">' + esc(it.desc || "") + "</span>" + was + "</li>";
+        '<span class="it-row">' + itemIcon(it) + '<span class="it">' + esc(it.name) + "</span></span>" +
+        '<span class="ds">' + esc(it.desc || "") + "</span>" + was + "</li>";
     }).join("") + "</ol>";
 
     var p = r.profile;

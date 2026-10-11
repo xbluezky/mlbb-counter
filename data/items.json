@@ -2,266 +2,319 @@
  "warrior_boots": {
   "name": "Warrior Boots",
   "cat": "boots",
-  "desc": "Physical def, nambah tiap kena basic attack"
+  "desc": "Physical def, nambah tiap kena basic attack",
+  "img": "https://mlbbdex.com/visuels/objets/warrior-boots.webp"
  },
  "tough_boots": {
   "name": "Tough Boots",
   "cat": "boots",
-  "desc": "Magic def + kurangi durasi CC"
+  "desc": "Magic def + kurangi durasi CC",
+  "img": "https://mlbbdex.com/visuels/objets/tough-boots.webp"
  },
  "swift_boots": {
   "name": "Swift Boots",
   "cat": "boots",
-  "desc": "Attack speed"
+  "desc": "Attack speed",
+  "img": "https://mlbbdex.com/visuels/objets/swift-boots.webp"
  },
  "arcane_boots": {
   "name": "Arcane Boots",
   "cat": "boots",
-  "desc": "Magic penetration"
+  "desc": "Magic penetration",
+  "img": "https://mlbbdex.com/visuels/objets/arcane-boots.webp"
  },
  "magic_shoes": {
   "name": "Magic Shoes",
   "cat": "boots",
-  "desc": "Cooldown reduction"
+  "desc": "Cooldown reduction",
+  "img": "https://mlbbdex.com/visuels/objets/magic-shoes.webp"
  },
  "rapid_boots": {
   "name": "Rapid Boots",
   "cat": "boots",
-  "desc": "Movement speed tinggi di luar combat"
+  "desc": "Movement speed tinggi di luar combat",
+  "img": "https://mlbbdex.com/visuels/objets/rapid-boots.webp"
  },
  "windtalker": {
   "name": "Windtalker",
   "cat": "attack",
-  "desc": "Attack speed + movement, basic attack berantai"
+  "desc": "Attack speed + movement, basic attack berantai",
+  "img": "https://mlbbdex.com/visuels/objets/windtalker.webp"
  },
  "berserkers_fury": {
   "name": "Berserker's Fury",
   "cat": "attack",
-  "desc": "Crit damage besar"
+  "desc": "Crit damage besar",
+  "img": "https://mlbbdex.com/visuels/objets/berserker-s-fury.webp"
  },
  "haas_claws": {
-  "name": "Haas's Claws",
+  "name": "Haas' Claws",
   "cat": "attack",
-  "desc": "Lifesteal + crit"
+  "desc": "Lifesteal + crit",
+  "img": "https://mlbbdex.com/visuels/objets/haas-claws.webp"
  },
  "blade_of_despair": {
   "name": "Blade of Despair",
   "cat": "attack",
-  "desc": "Physical attack besar, bonus ke target HP rendah"
+  "desc": "Physical attack besar, bonus ke target HP rendah",
+  "img": "https://mlbbdex.com/visuels/objets/blade-of-despair.webp"
  },
  "scarlet_phantom": {
   "name": "Scarlet Phantom",
   "cat": "attack",
-  "desc": "Crit chance + attack speed"
+  "desc": "Crit chance + attack speed",
+  "img": "https://mlbbdex.com/visuels/objets/scarlet-phantom.webp"
  },
  "golden_staff": {
   "name": "Golden Staff",
   "cat": "attack",
-  "desc": "Basic attack memicu efek on-hit berulang"
+  "desc": "Basic attack memicu efek on-hit berulang",
+  "img": "https://mlbbdex.com/visuels/objets/golden-staff.webp"
  },
  "corrosion_scythe": {
   "name": "Corrosion Scythe",
   "cat": "attack",
-  "desc": "Attack speed + slow lawan"
+  "desc": "Attack speed + slow lawan",
+  "img": "https://mlbbdex.com/visuels/objets/corrosion-scythe.webp"
  },
  "demon_hunter_sword": {
   "name": "Demon Hunter Sword",
   "cat": "attack",
-  "desc": "Damage tambahan berbasis HP target, anti tank"
+  "desc": "Damage tambahan berbasis HP target, anti tank",
+  "img": "https://mlbbdex.com/visuels/objets/demon-hunter-sword.webp"
  },
  "malefic_roar": {
   "name": "Malefic Roar",
   "cat": "attack",
-  "desc": "Physical penetration, makin kuat ke def tinggi"
+  "desc": "Physical penetration, makin kuat ke def tinggi",
+  "img": "https://mlbbdex.com/visuels/objets/malefic-roar.webp"
  },
  "sea_halberd": {
   "name": "Sea Halberd",
   "cat": "attack",
-  "desc": "Anti-heal fisik: potong regen & lifesteal target"
+  "desc": "Anti-heal fisik: potong regen & lifesteal target",
+  "img": "https://mlbbdex.com/visuels/objets/sea-halberd.webp"
  },
  "hunter_strike": {
   "name": "Hunter Strike",
   "cat": "attack",
-  "desc": "Physical pen + burst movement speed"
+  "desc": "Physical pen + burst movement speed",
+  "img": "https://mlbbdex.com/visuels/objets/hunter-strike.webp"
  },
  "blade_of_the_heptaseas": {
   "name": "Blade of the Heptaseas",
   "cat": "attack",
-  "desc": "Bonus damage serangan pertama dari luar combat"
+  "desc": "Bonus damage serangan pertama dari luar combat",
+  "img": "https://mlbbdex.com/visuels/objets/blade-of-the-heptaseas.webp"
  },
  "endless_battle": {
   "name": "Endless Battle",
   "cat": "attack",
-  "desc": "True damage setelah skill, item hybrid"
+  "desc": "True damage setelah skill, item hybrid",
+  "img": "https://mlbbdex.com/visuels/objets/endless-battle.webp"
  },
  "war_axe": {
   "name": "War Axe",
   "cat": "attack",
-  "desc": "Damage naik selama combat panjang"
+  "desc": "Damage naik selama combat panjang",
+  "img": "https://mlbbdex.com/visuels/objets/war-axe.webp"
  },
  "bloodlust_axe": {
   "name": "Bloodlust Axe",
   "cat": "attack",
-  "desc": "Spell vamp untuk skill fisik"
+  "desc": "Spell vamp untuk skill fisik",
+  "img": "https://mlbbdex.com/visuels/objets/bloodlust-axe.webp"
  },
  "great_dragon_spear": {
   "name": "Great Dragon Spear",
   "cat": "attack",
-  "desc": "Crit + movement setelah ultimate"
+  "desc": "Crit + movement setelah ultimate",
+  "img": "https://mlbbdex.com/visuels/objets/great-dragon-spear.webp"
  },
  "rose_gold_meteor": {
   "name": "Rose Gold Meteor",
   "cat": "attack",
-  "desc": "Shield saat HP rendah vs magic"
+  "desc": "Shield saat HP rendah vs magic",
+  "img": "https://mlbbdex.com/visuels/objets/rose-gold-meteor.webp"
  },
  "wind_of_nature": {
   "name": "Wind of Nature",
   "cat": "attack",
-  "desc": "Aktif: kebal damage fisik sebentar"
+  "desc": "Aktif: kebal damage fisik sebentar",
+  "img": "https://mlbbdex.com/visuels/objets/wind-of-nature.webp"
  },
  "clock_of_destiny": {
   "name": "Clock of Destiny",
   "cat": "magic",
-  "desc": "HP + magic power bertumpuk"
+  "desc": "HP + magic power bertumpuk",
+  "img": "https://mlbbdex.com/visuels/objets/clock-of-destiny.webp"
  },
  "lightning_truncheon": {
   "name": "Lightning Truncheon",
   "cat": "magic",
-  "desc": "Burst petir tiap beberapa detik"
+  "desc": "Burst petir tiap beberapa detik",
+  "img": "https://mlbbdex.com/visuels/objets/lightning-truncheon.webp"
  },
  "genius_wand": {
   "name": "Genius Wand",
   "cat": "magic",
-  "desc": "Magic pen + potong magic def target"
+  "desc": "Magic pen + potong magic def target",
+  "img": "https://mlbbdex.com/visuels/objets/genius-wand.webp"
  },
  "holy_crystal": {
   "name": "Holy Crystal",
   "cat": "magic",
-  "desc": "Magic power besar"
+  "desc": "Magic power besar",
+  "img": "https://mlbbdex.com/visuels/objets/holy-crystal.webp"
  },
  "blood_wings": {
   "name": "Blood Wings",
   "cat": "magic",
-  "desc": "Magic power + shield"
+  "desc": "Magic power + shield",
+  "img": "https://mlbbdex.com/visuels/objets/blood-wings.webp"
  },
  "divine_glaive": {
   "name": "Divine Glaive",
   "cat": "magic",
-  "desc": "Magic pen persen, anti magic def tinggi"
+  "desc": "Magic pen persen, anti magic def tinggi",
+  "img": "https://mlbbdex.com/visuels/objets/divine-glaive.webp"
  },
  "glowing_wand": {
   "name": "Glowing Wand",
   "cat": "magic",
-  "desc": "Burn berbasis HP target"
+  "desc": "Burn berbasis HP target",
+  "img": "https://mlbbdex.com/visuels/objets/glowing-wand.webp"
  },
  "ice_queen_wand": {
   "name": "Ice Queen Wand",
   "cat": "magic",
-  "desc": "Slow + spell vamp"
+  "desc": "Slow + spell vamp",
+  "img": "https://mlbbdex.com/visuels/objets/ice-queen-wand.webp"
  },
  "concentrated_energy": {
   "name": "Concentrated Energy",
   "cat": "magic",
-  "desc": "Spell vamp + HP"
+  "desc": "Spell vamp + HP",
+  "img": "https://mlbbdex.com/visuels/objets/concentrated-energy.webp"
  },
  "fleeting_time": {
   "name": "Fleeting Time",
   "cat": "magic",
-  "desc": "Kurangi cooldown ultimate setelah takedown"
+  "desc": "Kurangi cooldown ultimate setelah takedown",
+  "img": "https://mlbbdex.com/visuels/objets/fleeting-time.webp"
  },
  "starlium_scythe": {
   "name": "Starlium Scythe",
   "cat": "magic",
-  "desc": "Skill memberi true damage tambahan"
+  "desc": "Skill memberi true damage tambahan",
+  "img": "https://mlbbdex.com/visuels/objets/starlium-scythe.webp"
  },
  "enchanted_talisman": {
   "name": "Enchanted Talisman",
   "cat": "magic",
-  "desc": "Cooldown + regen mana"
+  "desc": "Cooldown + regen mana",
+  "img": "https://mlbbdex.com/visuels/objets/enchanted-talisman.webp"
  },
  "feather_of_heaven": {
   "name": "Feather of Heaven",
   "cat": "magic",
-  "desc": "Attack speed untuk hero magic basic attack"
+  "desc": "Attack speed untuk hero magic basic attack",
+  "img": "https://mlbbdex.com/visuels/objets/feather-of-heaven.webp"
  },
  "necklace_of_durance": {
   "name": "Necklace of Durance",
   "cat": "magic",
-  "desc": "Anti-heal magic: potong regen & spell vamp"
+  "desc": "Anti-heal magic: potong regen & spell vamp",
+  "img": "https://mlbbdex.com/visuels/objets/necklace-of-durance.webp"
  },
  "winter_crown": {
   "name": "Winter Crown",
   "cat": "magic",
-  "desc": "Aktif: membeku, kebal semua damage sebentar"
+  "desc": "Aktif: membeku, kebal semua damage sebentar",
+  "img": "https://mlbbdex.com/visuels/objets/winter-crown.webp"
  },
  "flask_of_the_oasis": {
   "name": "Flask of the Oasis",
   "cat": "magic",
-  "desc": "Tambah efek heal & shield ke teman"
+  "desc": "Tambah efek heal & shield ke teman",
+  "img": "https://mlbbdex.com/visuels/objets/flask-of-the-oasis.webp"
  },
  "athenas_shield": {
   "name": "Athena's Shield",
   "cat": "defense",
-  "desc": "Magic def + shield saat kena burst magic"
+  "desc": "Magic def + shield saat kena burst magic",
+  "img": "https://mlbbdex.com/visuels/objets/athena-s-shield.webp"
  },
  "radiant_armor": {
   "name": "Radiant Armor",
   "cat": "defense",
-  "desc": "Magic def menumpuk saat terus kena magic"
+  "desc": "Magic def menumpuk saat terus kena magic",
+  "img": "https://mlbbdex.com/visuels/objets/radiant-armor.webp"
  },
  "antique_cuirass": {
   "name": "Antique Cuirass",
   "cat": "defense",
-  "desc": "Physical def + kurangi attack lawan yang mukul"
+  "desc": "Physical def + kurangi attack lawan yang mukul",
+  "img": "https://mlbbdex.com/visuels/objets/antique-cuirass.webp"
  },
  "blade_armor": {
   "name": "Blade Armor",
   "cat": "defense",
-  "desc": "Physical def + pantulkan damage basic attack"
+  "desc": "Physical def + pantulkan damage basic attack",
+  "img": "https://mlbbdex.com/visuels/objets/blade-armor.webp"
  },
  "dominance_ice": {
   "name": "Dominance Ice",
   "cat": "defense",
-  "desc": "Anti-heal aura + turunkan attack speed lawan sekitar"
+  "desc": "Anti-heal aura + turunkan attack speed lawan sekitar",
+  "img": "https://mlbbdex.com/visuels/objets/dominance-ice.webp"
  },
  "brute_force_breastplate": {
   "name": "Brute Force Breastplate",
   "cat": "defense",
-  "desc": "Def + movement bertumpuk saat combat"
+  "desc": "Def + movement bertumpuk saat combat",
+  "img": "https://mlbbdex.com/visuels/objets/brute-force-breastplate.webp"
  },
  "twilight_armor": {
   "name": "Twilight Armor",
   "cat": "defense",
-  "desc": "Kurangi damage dari pukulan besar"
+  "desc": "Kurangi damage dari pukulan besar",
+  "img": "https://mlbbdex.com/visuels/objets/twilight-armor.webp"
  },
  "oracle": {
   "name": "Oracle",
   "cat": "defense",
-  "desc": "Naikkan heal & shield yang diterima"
+  "desc": "Naikkan heal & shield yang diterima",
+  "img": "https://mlbbdex.com/visuels/objets/oracle.webp"
  },
  "thunder_belt": {
   "name": "Thunder Belt",
   "cat": "defense",
-  "desc": "HP + def, skill berikutnya nambah damage & slow"
+  "desc": "HP + def, skill berikutnya nambah damage & slow",
+  "img": "https://mlbbdex.com/visuels/objets/thunder-belt.webp"
  },
  "guardian_helmet": {
   "name": "Guardian Helmet",
   "cat": "defense",
-  "desc": "HP besar + regen cepat"
+  "desc": "HP besar + regen cepat",
+  "img": "https://mlbbdex.com/visuels/objets/guardian-helmet.webp"
  },
  "queens_wings": {
   "name": "Queen's Wings",
   "cat": "defense",
-  "desc": "Kurangi damage + spell vamp saat HP rendah"
+  "desc": "Kurangi damage + spell vamp saat HP rendah",
+  "img": "https://mlbbdex.com/visuels/objets/queen-s-wings.webp"
  },
  "immortality": {
   "name": "Immortality",
   "cat": "defense",
-  "desc": "Bangkit sekali setelah mati"
+  "desc": "Bangkit sekali setelah mati",
+  "img": "https://mlbbdex.com/visuels/objets/immortality.webp"
  },
  "cursed_helmet": {
   "name": "Cursed Helmet",
   "cat": "defense",
-  "desc": "Magic def + burn aura (bagus buat clear wave)"
+  "desc": "Magic def + burn aura (bagus buat clear wave)",
+  "img": "https://mlbbdex.com/visuels/objets/cursed-helmet.webp"
  }
 }

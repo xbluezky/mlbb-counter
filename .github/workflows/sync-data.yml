@@ -30,7 +30,7 @@ jobs:
         run: |
           rm -f data/*.bak
           # synced_at selalu berubah; commit hanya kalau isi data lain ikut berubah
-          if git diff --quiet -- data/heroes.json && [ "$(git diff -U0 -- data/meta.json | grep -c '^[+-] ' )" -le 2 ]; then
+          if git diff --quiet -- data/heroes.json data/items.json && [ "$(git diff -U0 -- data/meta.json | grep -c '^[+-] ' )" -le 2 ]; then
             echo "Tidak ada perubahan berarti."
             exit 0
           fi

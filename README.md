@@ -76,6 +76,12 @@ Yang dilakukan sync:
 - Data kurasi yang sudah ada tidak pernah ditimpa. Tiap tulis ada backup `.bak`.
 - Kalau API down, sync keluar dengan kode 2 dan data lama tetap dipakai.
 
+## Gambar hero & item
+
+Ikon hero dan item di-hotlink dari MLBBDex (`https://mlbbdex.com/visuels/...`) lewat field `img` di `data/heroes.json` dan `data/items.json`. Sync otomatis mengisi `img` untuk hero/item baru. Kalau gambar gagal dimuat, UI balik ke avatar inisial.
+
+Gambar-gambar itu aset milik Moonton (diambil MLBBDex dari wiki komunitas). Pakai untuk proyek fan non-komersial, dan hapus kalau pemegang hak meminta. Mau pakai sumber lain? Ganti saja URL di field `img`.
+
 ## Edit data manual
 
 - Tag/archetype hero: `data/heroes.json`. Hero dengan `"review": true` ditandai di UI.

@@ -14,7 +14,8 @@
    "dive"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/aamon/icone.webp"
  },
  {
   "id": "akai",
@@ -32,7 +33,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/akai/icone.webp"
  },
  {
   "id": "aldous",
@@ -49,7 +51,8 @@
    "tank"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/aldous/icone.webp"
  },
  {
   "id": "alice",
@@ -59,8 +62,8 @@
    "jungle"
   ],
   "roles": [
-   "Mage",
-   "Tank"
+   "Tank",
+   "Mage"
   ],
   "dmg": "magic",
   "tags": [
@@ -70,7 +73,8 @@
    "dive"
   ],
   "arch": "magic_bruiser",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/alice/icone.webp"
  },
  {
   "id": "alpha",
@@ -90,7 +94,8 @@
    "true"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/alpha/icone.webp"
  },
  {
   "id": "alucard",
@@ -110,7 +115,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/alucard/icone.webp"
  },
  {
   "id": "angela",
@@ -127,7 +133,8 @@
    "shield"
   ],
   "arch": "support_heal",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/angela/icone.webp"
  },
  {
   "id": "argus",
@@ -145,7 +152,8 @@
    "atkspd"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/argus/icone.webp"
  },
  {
   "id": "arlott",
@@ -165,7 +173,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/arlott/icone.webp"
  },
  {
   "id": "atlas",
@@ -182,7 +191,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/atlas/icone.webp"
  },
  {
   "id": "aulus",
@@ -201,7 +211,8 @@
    "tank"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/aulus/icone.webp"
  },
  {
   "id": "aurora",
@@ -218,14 +229,16 @@
    "cc"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/aurora/icone.webp"
  },
  {
   "id": "badang",
   "name": "Badang",
   "lanes": [
    "exp",
-   "jungle"
+   "jungle",
+   "roam"
   ],
   "roles": [
    "Fighter"
@@ -236,7 +249,8 @@
    "cc"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/badang/icone.webp"
  },
  {
   "id": "balmond",
@@ -256,7 +270,8 @@
    "true"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/balmond/icone.webp"
  },
  {
   "id": "bane",
@@ -275,7 +290,8 @@
    "burst"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/bane/icone.webp"
  },
  {
   "id": "barats",
@@ -294,7 +310,8 @@
    "cc"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/barats/icone.webp"
  },
  {
   "id": "baxia",
@@ -312,7 +329,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/baxia/icone.webp"
  },
  {
   "id": "beatrix",
@@ -330,7 +348,8 @@
    "crit"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/beatrix/icone.webp"
  },
  {
   "id": "belerick",
@@ -347,7 +366,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/belerick/icone.webp"
  },
  {
   "id": "benedetta",
@@ -366,7 +386,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/benedetta/icone.webp"
  },
  {
   "id": "brody",
@@ -383,7 +404,8 @@
    "poke"
   ],
   "arch": "mm_onhit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/brody/icone.webp"
  },
  {
   "id": "bruno",
@@ -400,7 +422,8 @@
    "burst"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/bruno/icone.webp"
  },
  {
   "id": "carmilla",
@@ -419,7 +442,8 @@
    "heal"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/carmilla/icone.webp"
  },
  {
   "id": "cecilion",
@@ -436,7 +460,8 @@
    "dps"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/cecilion/icone.webp"
  },
  {
   "id": "chang-e",
@@ -454,7 +479,8 @@
    "shield"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/chang-e/icone.webp"
  },
  {
   "id": "chip",
@@ -463,8 +489,8 @@
    "roam"
   ],
   "roles": [
-   "Tank",
-   "Support"
+   "Support",
+   "Tank"
   ],
   "dmg": "magic",
   "tags": [
@@ -473,7 +499,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/chip/icone.webp"
  },
  {
   "id": "chou",
@@ -493,7 +520,8 @@
    "tank"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/chou/icone.webp"
  },
  {
   "id": "cici",
@@ -510,7 +538,8 @@
    "dps"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/cici/icone.webp"
  },
  {
   "id": "claude",
@@ -529,7 +558,8 @@
    "dive"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/claude/icone.webp"
  },
  {
   "id": "clint",
@@ -546,7 +576,8 @@
    "poke"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/clint/icone.webp"
  },
  {
   "id": "cyclops",
@@ -563,7 +594,8 @@
    "burst"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/cyclops/icone.webp"
  },
  {
   "id": "diggie",
@@ -579,7 +611,8 @@
    "cc"
   ],
   "arch": "support_heal",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/diggie/icone.webp"
  },
  {
   "id": "dyrroth",
@@ -598,7 +631,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/dyrroth/icone.webp"
  },
  {
   "id": "edith",
@@ -619,7 +653,8 @@
    "atkspd"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/edith/icone.webp"
  },
  {
   "id": "esmeralda",
@@ -628,8 +663,8 @@
    "exp"
   ],
   "roles": [
-   "Mage",
-   "Tank"
+   "Tank",
+   "Mage"
   ],
   "dmg": "magic",
   "tags": [
@@ -639,7 +674,8 @@
    "tank"
   ],
   "arch": "magic_bruiser",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/esmeralda/icone.webp"
  },
  {
   "id": "estes",
@@ -655,7 +691,8 @@
    "heal"
   ],
   "arch": "support_heal",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/estes/icone.webp"
  },
  {
   "id": "eudora",
@@ -672,7 +709,8 @@
    "cc"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/eudora/icone.webp"
  },
  {
   "id": "fanny",
@@ -689,7 +727,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/fanny/icone.webp"
  },
  {
   "id": "faramis",
@@ -708,7 +747,8 @@
    "heal"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/faramis/icone.webp"
  },
  {
   "id": "floryn",
@@ -724,7 +764,8 @@
    "heal"
   ],
   "arch": "support_heal",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/floryn/icone.webp"
  },
  {
   "id": "franco",
@@ -741,7 +782,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/franco/icone.webp"
  },
  {
   "id": "fredrinn",
@@ -761,7 +803,8 @@
    "burst"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/fredrinn/icone.webp"
  },
  {
   "id": "freya",
@@ -780,7 +823,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/freya/icone.webp"
  },
  {
   "id": "gatotkaca",
@@ -799,7 +843,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/gatotkaca/icone.webp"
  },
  {
   "id": "gloo",
@@ -818,7 +863,8 @@
    "heal"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/gloo/icone.webp"
  },
  {
   "id": "gord",
@@ -835,7 +881,8 @@
    "poke"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/gord/icone.webp"
  },
  {
   "id": "granger",
@@ -853,7 +900,8 @@
    "crit"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/granger/icone.webp"
  },
  {
   "id": "grock",
@@ -862,7 +910,8 @@
    "roam"
   ],
   "roles": [
-   "Tank"
+   "Tank",
+   "Fighter"
   ],
   "dmg": "phys",
   "tags": [
@@ -871,7 +920,8 @@
    "burst"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/grock/icone.webp"
  },
  {
   "id": "guinevere",
@@ -890,7 +940,8 @@
    "dive"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/guinevere/icone.webp"
  },
  {
   "id": "gusion",
@@ -908,7 +959,8 @@
    "dive"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/gusion/icone.webp"
  },
  {
   "id": "hanabi",
@@ -926,7 +978,8 @@
    "shield"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/hanabi/icone.webp"
  },
  {
   "id": "hanzo",
@@ -943,7 +996,8 @@
    "heal"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/hanzo/icone.webp"
  },
  {
   "id": "harith",
@@ -962,7 +1016,8 @@
    "shield"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/harith/icone.webp"
  },
  {
   "id": "harley",
@@ -981,7 +1036,8 @@
    "dive"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/harley/icone.webp"
  },
  {
   "id": "hayabusa",
@@ -998,13 +1054,15 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/hayabusa/icone.webp"
  },
  {
   "id": "helcurt",
   "name": "Helcurt",
   "lanes": [
-   "jungle"
+   "jungle",
+   "roam"
   ],
   "roles": [
    "Assassin"
@@ -1015,7 +1073,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/helcurt/icone.webp"
  },
  {
   "id": "hilda",
@@ -1035,7 +1094,27 @@
    "burst"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/hilda/icone.webp"
+ },
+ {
+  "id": "hirara",
+  "name": "Hirara",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated",
+  "review": true,
+  "img": "https://mlbbdex.com/visuels/heros/hirara/icone.webp"
  },
  {
   "id": "hylos",
@@ -1054,7 +1133,8 @@
    "heal"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/hylos/icone.webp"
  },
  {
   "id": "irithel",
@@ -1072,7 +1152,8 @@
    "dps"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/irithel/icone.webp"
  },
  {
   "id": "ixia",
@@ -1090,7 +1171,8 @@
    "poke"
   ],
   "arch": "mm_onhit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/ixia/icone.webp"
  },
  {
   "id": "jawhead",
@@ -1110,7 +1192,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/jawhead/icone.webp"
  },
  {
   "id": "johnson",
@@ -1119,7 +1202,8 @@
    "roam"
   ],
   "roles": [
-   "Tank"
+   "Tank",
+   "Support"
   ],
   "dmg": "magic",
   "tags": [
@@ -1129,7 +1213,8 @@
    "burst"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/johnson/icone.webp"
  },
  {
   "id": "joy",
@@ -1146,7 +1231,8 @@
    "dive"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/joy/icone.webp"
  },
  {
   "id": "julian",
@@ -1156,18 +1242,18 @@
    "exp"
   ],
   "roles": [
-   "Fighter",
-   "Mage"
+   "Assassin",
+   "Fighter"
   ],
-  "dmg": "mixed",
+  "dmg": "magic",
   "tags": [
    "burst",
    "dive",
    "heal"
   ],
-  "arch": "fighter_phys",
+  "arch": "mage_assassin",
   "source": "curated",
-  "review": true
+  "img": "https://mlbbdex.com/visuels/heros/julian/icone.webp"
  },
  {
   "id": "kadita",
@@ -1187,7 +1273,8 @@
    "dive"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/kadita/icone.webp"
  },
  {
   "id": "kagura",
@@ -1204,7 +1291,8 @@
    "poke"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/kagura/icone.webp"
  },
  {
   "id": "kaja",
@@ -1213,8 +1301,8 @@
    "roam"
   ],
   "roles": [
-   "Fighter",
-   "Support"
+   "Support",
+   "Fighter"
   ],
   "dmg": "magic",
   "tags": [
@@ -1222,7 +1310,8 @@
    "tank"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/kaja/icone.webp"
  },
  {
   "id": "kalea",
@@ -1242,7 +1331,7 @@
   ],
   "arch": "tank_roam",
   "source": "curated",
-  "review": true
+  "img": "https://mlbbdex.com/visuels/heros/kalea/icone.webp"
  },
  {
   "id": "karina",
@@ -1260,7 +1349,8 @@
    "true"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/karina/icone.webp"
  },
  {
   "id": "karrie",
@@ -1278,13 +1368,15 @@
    "atkspd"
   ],
   "arch": "mm_onhit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/karrie/icone.webp"
  },
  {
   "id": "khaleed",
   "name": "Khaleed",
   "lanes": [
-   "exp"
+   "exp",
+   "roam"
   ],
   "roles": [
    "Fighter"
@@ -1296,7 +1388,8 @@
    "cc"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/khaleed/icone.webp"
  },
  {
   "id": "khufra",
@@ -1313,7 +1406,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/khufra/icone.webp"
  },
  {
   "id": "kimmy",
@@ -1326,13 +1420,14 @@
    "Marksman",
    "Mage"
   ],
-  "dmg": "mixed",
+  "dmg": "magic",
   "tags": [
    "dps",
    "poke"
   ],
   "arch": "mm_magic",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/kimmy/icone.webp"
  },
  {
   "id": "lancelot",
@@ -1349,7 +1444,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lancelot/icone.webp"
  },
  {
   "id": "lapu-lapu",
@@ -1366,7 +1462,8 @@
    "cc"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lapu-lapu/icone.webp"
  },
  {
   "id": "layla",
@@ -1384,7 +1481,8 @@
    "dps"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/layla/icone.webp"
  },
  {
   "id": "leomord",
@@ -1402,7 +1500,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/leomord/icone.webp"
  },
  {
   "id": "lesley",
@@ -1422,7 +1521,8 @@
    "poke"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lesley/icone.webp"
  },
  {
   "id": "ling",
@@ -1440,7 +1540,8 @@
    "burst"
   ],
   "arch": "crit_jungle",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/ling/icone.webp"
  },
  {
   "id": "lolita",
@@ -1449,8 +1550,8 @@
    "roam"
   ],
   "roles": [
-   "Tank",
-   "Support"
+   "Support",
+   "Tank"
   ],
   "dmg": "phys",
   "tags": [
@@ -1459,7 +1560,8 @@
    "shield"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lolita/icone.webp"
  },
  {
   "id": "lukas",
@@ -1478,7 +1580,8 @@
    "cc"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lukas/icone.webp"
  },
  {
   "id": "lunox",
@@ -1498,7 +1601,8 @@
    "dive"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lunox/icone.webp"
  },
  {
   "id": "luo-yi",
@@ -1516,7 +1620,8 @@
    "dps"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/luo-yi/icone.webp"
  },
  {
   "id": "lylia",
@@ -1533,7 +1638,27 @@
    "dps"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/lylia/icone.webp"
+ },
+ {
+  "id": "marcel",
+  "name": "Marcel",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated",
+  "review": true,
+  "img": "https://mlbbdex.com/visuels/heros/marcel/icone.webp"
  },
  {
   "id": "martis",
@@ -1552,7 +1677,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/martis/icone.webp"
  },
  {
   "id": "masha",
@@ -1562,7 +1688,8 @@
    "jungle"
   ],
   "roles": [
-   "Fighter"
+   "Fighter",
+   "Tank"
   ],
   "dmg": "phys",
   "tags": [
@@ -1572,7 +1699,7 @@
   ],
   "arch": "fighter_phys",
   "source": "curated",
-  "review": true
+  "img": "https://mlbbdex.com/visuels/heros/masha/icone.webp"
  },
  {
   "id": "mathilda",
@@ -1591,7 +1718,8 @@
    "burst"
   ],
   "arch": "support_heal",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/mathilda/icone.webp"
  },
  {
   "id": "melissa",
@@ -1608,7 +1736,8 @@
    "dps"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/melissa/icone.webp"
  },
  {
   "id": "minotaur",
@@ -1617,7 +1746,8 @@
    "roam"
   ],
   "roles": [
-   "Tank"
+   "Tank",
+   "Support"
   ],
   "dmg": "phys",
   "tags": [
@@ -1626,7 +1756,8 @@
    "heal"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/minotaur/icone.webp"
  },
  {
   "id": "minsitthar",
@@ -1644,7 +1775,8 @@
    "tank"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/minsitthar/icone.webp"
  },
  {
   "id": "miya",
@@ -1662,7 +1794,8 @@
    "dps"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/miya/icone.webp"
  },
  {
   "id": "moskov",
@@ -1680,7 +1813,8 @@
    "dps"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/moskov/icone.webp"
  },
  {
   "id": "nana",
@@ -1699,7 +1833,8 @@
    "poke"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/nana/icone.webp"
  },
  {
   "id": "natalia",
@@ -1717,7 +1852,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/natalia/icone.webp"
  },
  {
   "id": "natan",
@@ -1734,7 +1870,8 @@
    "atkspd"
   ],
   "arch": "mm_magic",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/natan/icone.webp"
  },
  {
   "id": "nolan",
@@ -1751,7 +1888,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/nolan/icone.webp"
  },
  {
   "id": "novaria",
@@ -1768,11 +1906,12 @@
    "burst"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/novaria/icone.webp"
  },
  {
-  "id": "obsidian",
-  "name": "Obsidian",
+  "id": "obsidia",
+  "name": "Obsidia",
   "lanes": [
    "gold"
   ],
@@ -1786,7 +1925,7 @@
   ],
   "arch": "mm_crit",
   "source": "curated",
-  "review": true
+  "img": "https://mlbbdex.com/visuels/heros/obsidia/icone.webp"
  },
  {
   "id": "odette",
@@ -1803,7 +1942,8 @@
    "cc"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/odette/icone.webp"
  },
  {
   "id": "paquito",
@@ -1812,7 +1952,8 @@
    "exp"
   ],
   "roles": [
-   "Fighter"
+   "Fighter",
+   "Assassin"
   ],
   "dmg": "phys",
   "tags": [
@@ -1821,7 +1962,8 @@
    "dive"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/paquito/icone.webp"
  },
  {
   "id": "pharsa",
@@ -1838,7 +1980,8 @@
    "burst"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/pharsa/icone.webp"
  },
  {
   "id": "phoveus",
@@ -1855,13 +1998,15 @@
    "dps"
   ],
   "arch": "magic_bruiser",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/phoveus/icone.webp"
  },
  {
   "id": "popol-and-kupa",
   "name": "Popol and Kupa",
   "lanes": [
-   "gold"
+   "gold",
+   "jungle"
   ],
   "roles": [
    "Marksman"
@@ -1873,7 +2018,8 @@
    "atkspd"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/popol-and-kupa/icone.webp"
  },
  {
   "id": "rafaela",
@@ -1889,7 +2035,8 @@
    "heal"
   ],
   "arch": "support_heal",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/rafaela/icone.webp"
  },
  {
   "id": "roger",
@@ -1908,7 +2055,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/roger/icone.webp"
  },
  {
   "id": "ruby",
@@ -1927,7 +2075,8 @@
    "tank"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/ruby/icone.webp"
  },
  {
   "id": "saber",
@@ -1944,7 +2093,8 @@
    "burst"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/saber/icone.webp"
  },
  {
   "id": "selena",
@@ -1963,7 +2113,8 @@
    "cc"
   ],
   "arch": "mage_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/selena/icone.webp"
  },
  {
   "id": "silvanna",
@@ -1981,7 +2132,28 @@
    "heal"
   ],
   "arch": "magic_bruiser",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/silvanna/icone.webp"
+ },
+ {
+  "id": "sora",
+  "name": "Sora",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter",
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated",
+  "review": true,
+  "img": "https://mlbbdex.com/visuels/heros/sora/icone.webp"
  },
  {
   "id": "sun",
@@ -1999,7 +2171,8 @@
    "atkspd"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/sun/icone.webp"
  },
  {
   "id": "suyou",
@@ -2018,7 +2191,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/suyou/icone.webp"
  },
  {
   "id": "terizla",
@@ -2027,7 +2201,8 @@
    "exp"
   ],
   "roles": [
-   "Fighter"
+   "Fighter",
+   "Tank"
   ],
   "dmg": "phys",
   "tags": [
@@ -2036,7 +2211,8 @@
    "burst"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/terizla/icone.webp"
  },
  {
   "id": "thamuz",
@@ -2055,7 +2231,8 @@
    "tank"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/thamuz/icone.webp"
  },
  {
   "id": "tigreal",
@@ -2072,7 +2249,8 @@
    "cc"
   ],
   "arch": "tank_roam",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/tigreal/icone.webp"
  },
  {
   "id": "uranus",
@@ -2089,7 +2267,8 @@
    "tank"
   ],
   "arch": "fighter_tank",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/uranus/icone.webp"
  },
  {
   "id": "vale",
@@ -2107,7 +2286,8 @@
    "poke"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/vale/icone.webp"
  },
  {
   "id": "valentina",
@@ -2126,7 +2306,8 @@
    "dps"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/valentina/icone.webp"
  },
  {
   "id": "valir",
@@ -2143,7 +2324,8 @@
    "cc"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/valir/icone.webp"
  },
  {
   "id": "vexana",
@@ -2160,7 +2342,8 @@
    "poke"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/vexana/icone.webp"
  },
  {
   "id": "wanwan",
@@ -2179,7 +2362,8 @@
    "dps"
   ],
   "arch": "mm_crit",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/wanwan/icone.webp"
  },
  {
   "id": "x-borg",
@@ -2197,7 +2381,8 @@
    "true"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/x-borg/icone.webp"
  },
  {
   "id": "xavier",
@@ -2214,7 +2399,8 @@
    "burst"
   ],
   "arch": "mage_burst",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/xavier/icone.webp"
  },
  {
   "id": "yi-sun-shin",
@@ -2233,7 +2419,8 @@
    "crit"
   ],
   "arch": "crit_jungle",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/yi-sun-shin/icone.webp"
  },
  {
   "id": "yin",
@@ -2243,7 +2430,8 @@
    "jungle"
   ],
   "roles": [
-   "Fighter"
+   "Fighter",
+   "Assassin"
   ],
   "dmg": "phys",
   "tags": [
@@ -2251,7 +2439,8 @@
    "dive"
   ],
   "arch": "phys_assassin",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/yin/icone.webp"
  },
  {
   "id": "yu-zhong",
@@ -2270,7 +2459,8 @@
    "tank"
   ],
   "arch": "fighter_phys",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/yu-zhong/icone.webp"
  },
  {
   "id": "yve",
@@ -2288,7 +2478,8 @@
    "cc"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/yve/icone.webp"
  },
  {
   "id": "zetian",
@@ -2306,7 +2497,7 @@
   ],
   "arch": "mage_burst",
   "source": "curated",
-  "review": true
+  "img": "https://mlbbdex.com/visuels/heros/zetian/icone.webp"
  },
  {
   "id": "zhask",
@@ -2323,7 +2514,8 @@
    "poke"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/zhask/icone.webp"
  },
  {
   "id": "zhuxin",
@@ -2340,7 +2532,8 @@
    "cc"
   ],
   "arch": "mage_dps",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/zhuxin/icone.webp"
  },
  {
   "id": "zilong",
@@ -2361,6 +2554,7 @@
    "crit"
   ],
   "arch": "crit_jungle",
-  "source": "curated"
+  "source": "curated",
+  "img": "https://mlbbdex.com/visuels/heros/zilong/icone.webp"
  }
 ]
