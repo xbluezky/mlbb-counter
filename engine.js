@@ -216,7 +216,89 @@
 
   function level(v, lo, hi) { return v >= hi ? "tinggi" : v >= lo ? "sedang" : "rendah"; }
 
-  var api = { LANES: LANES, LANE_LABEL: LANE_LABEL, TAG_LABEL: TAG_LABEL, profile: profile, recommend: recommend, level: level };
+  /* ---------- Rekomendasi hero (last pick) ---------- */
+
+  // Selisih win rate (%) hero A saat ketemu B, dari statistik match. Positif = A unggul.
+  function matchup(C, a, b, rank) {
+    if (!C || !C.heroes) return null;
+    function row(id) {
+      var h = C.heroes[id];
+      return h && (h[rank] || h.all) || null;
+    }
+    var vals = [];
+    var ra = row(a), rb = row(b), i;
+    if (ra) {
+      for (i = 0; i < ra.s.length; i++) if (ra.s[i][0] === b) vals.push(ra.s[i][1]);
+      for (i = 0; i < ra.w.length; i++) if (ra.w[i][0] === b) vals.push(ra.w[i][1]);
+    }
+    if (rb) {
+      for (i = 0; i < rb.s.length; i++) if (rb.s[i][0] === a) vals.push(-rb.s[i][1]);
+      for (i = 0; i < rb.w.length; i++) if (rb.w[i][0] === a) vals.push(-rb.w[i][1]);
+    }
+    if (!vals.length) return null;
+    return vals.reduce(function (x, y) { return x + y; }, 0) / vals.length;
+  }
+
+  function winRate(C, id, rank) {
+    if (!C) return null;
+    var h = C.heroes && C.heroes[id];
+    var r = h && (h[rank] || h.all);
+    if (r && typeof r.wr === "number") return r.wr;
+    var x = C.rates && C.rates[id];
+    return x && typeof x.wr === "number" ? x.wr : null;
+  }
+
+  function recommendPicks(opts) {
+    var data = opts.data, C = data.counters, lane = opts.lane, rank = opts.rank || "all";
+    var enemies = (opts.enemies || []).filter(function (e) { return e && e.hero; });
+    if (!enemies.length) return { picks: [], laneOpp: null };
+    var p = profile(enemies);
+    var taken = {};
+    enemies.forEach(function (e) { taken[e.hero.id] = true; });
+    var laneOpp = null;
+    enemies.forEach(function (e) { if (e.lane === lane) laneOpp = e; });
+
+    var picks = data.heroes.filter(function (h) {
+      return h.lanes.indexOf(lane) >= 0 && !taken[h.id];
+    }).map(function (h) {
+      var t = h.tags || [], has = function (x) { return t.indexOf(x) >= 0; };
+      var score = 0, pros = [], cons = [], counterSum = 0, known = 0;
+
+      enemies.forEach(function (e) {
+        var adv = matchup(C, h.id, e.hero.id, rank);
+        if (adv === null) return;
+        known += 1;
+        var w = (e === laneOpp ? 2 : 1) * (e.fed ? 1.5 : 1);
+        counterSum += adv * w;
+        var tag = e === laneOpp ? " (lawan lane)" : "";
+        if (adv >= 1) pros.push({ v: adv * w, t: "Unggul vs " + e.hero.name + tag + " +" + adv.toFixed(1) + "%" });
+        if (adv <= -1) cons.push({ v: adv * w, t: "Rawan vs " + e.hero.name + tag + " " + adv.toFixed(1) + "%" });
+      });
+      score += counterSum;
+
+      // Aturan komposisi (bobot setara ~1% selisih win rate).
+      if (p.tank >= 2 && (has("dps") || has("true"))) { score += 1; pros.push({ v: 1, t: "Damage konsisten lawan tim tanky" }); }
+      if (p.dive >= 2 && has("cc")) { score += 1; pros.push({ v: 1, t: "Punya CC buat ngunci diver lawan" }); }
+      if (p.heal + p.shield >= 2 && has("burst")) { score += 0.6; pros.push({ v: 0.6, t: "Burst nembus sustain lawan" }); }
+      if (p.poke >= 3 && has("dive")) { score += 0.8; pros.push({ v: 0.8, t: "Bisa langsung masuk ke tim poke" }); }
+      if (p.crit >= 2 && has("tank")) { score += 0.4; }
+      if (p.cc >= 3 && !has("tank") && has("dive")) { score -= 0.6; cons.push({ v: -0.6, t: "Lawan banyak CC, rawan dikunci" }); }
+
+      var wr = winRate(C, h.id, rank);
+      if (wr !== null) score += (wr - 50) * 0.25;
+
+      pros.sort(function (a, b) { return b.v - a.v; });
+      cons.sort(function (a, b) { return a.v - b.v; });
+      return { hero: h, score: score, wr: wr, known: known,
+        pros: pros.slice(0, 3).map(function (x) { return x.t; }),
+        cons: cons.slice(0, 2).map(function (x) { return x.t; }) };
+    }).sort(function (a, b) { return b.score - a.score; });
+
+    return { picks: picks.slice(0, opts.limit || 6), laneOpp: laneOpp, total: picks.length };
+  }
+
+  var api = { LANES: LANES, LANE_LABEL: LANE_LABEL, TAG_LABEL: TAG_LABEL, profile: profile, recommend: recommend,
+    recommendPicks: recommendPicks, matchup: matchup, level: level };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.CounterEngine = api;
 })(this);

@@ -15,13 +15,14 @@
       { lane: "gold", hero: "claude", fed: false },
       { lane: "roam", hero: "estes", fed: false }
     ],
-    example: true
+    example: true,
+    rank: "all"
   };
   var state = null;
 
   function blank() {
     return { me: { lane: "gold", hero: null },
-      enemies: LANES.map(function (l) { return { lane: l, hero: null, fed: false }; }), example: false };
+      enemies: LANES.map(function (l) { return { lane: l, hero: null, fed: false }; }), example: false, rank: "all" };
   }
   function load() {
     try { var s = JSON.parse(localStorage.getItem(STORE_KEY)); if (s && s.me && s.enemies) return s; } catch (e) {}
@@ -134,7 +135,37 @@
     box.innerHTML = head + slots + meter + why + notes + rev;
   }
 
-  function render() { renderMe(); renderEnemies(); renderResult(); }
+  /* ---------- Rekomendasi pick ---------- */
+  var RANK_LABEL = { all: "Semua rank", epic: "Epic", legend: "Legend", mythic: "Mythic", honor: "Honor", glory: "Glory" };
+  function renderPicks() {
+    var lane = state.me.lane;
+    $("picks-title").textContent = "Rekomendasi pick · " + LL[lane];
+    var ranks = (DATA.counters && DATA.counters.ranks) || [];
+    $("rank-chips").innerHTML = ranks.map(function (r) {
+      return '<button type="button" class="chip" data-rank="' + r + '" aria-pressed="' + ((state.rank || "all") === r) + '">' + (RANK_LABEL[r] || r) + "</button>";
+    }).join("");
+    $("rank-chips").hidden = !ranks.length;
+    var enemies = state.enemies.map(function (e) { return { hero: BY_ID[e.hero], fed: e.fed, lane: e.lane }; });
+    var r = E.recommendPicks({ lane: lane, enemies: enemies, data: DATA, rank: state.rank || "all", limit: 6 });
+    if (!r.picks.length) {
+      $("picks").innerHTML = '<p class="picks-empty">Isi hero lawan dulu. Rekomendasi hero ' + LL[lane] + " muncul di sini, terutama yang unggul lawan musuh di lane lu.</p>";
+      return;
+    }
+    var opp = r.laneOpp
+      ? '<p class="picks-lane">Lawan lane lu: <b>' + esc(r.laneOpp.hero.name) + "</b> (bobot dobel)</p>"
+      : '<p class="picks-lane">Lawan lane ' + LL[lane] + " belum diisi; rekomendasi pakai semua lawan.</p>";
+    $("picks").innerHTML = opp + '<ol class="pk-list">' + r.picks.map(function (c, i) {
+      var h = c.hero;
+      var lines = c.pros.map(function (t) { return '<li class="pro">+ ' + esc(t) + "</li>"; })
+        .concat(c.cons.map(function (t) { return '<li class="con">− ' + esc(t) + "</li>"; }));
+      if (!lines.length) lines.push("<li>Netral lawan komposisi ini; unggul dari win rate patch.</li>");
+      return '<li><button type="button" class="cand' + (state.me.hero === h.id ? " on" : "") + '" data-cand="' + h.id + '">' +
+        avatar(h) + '<span><span class="rank-no">#' + (i + 1) + '</span> <span class="nm">' + esc(h.name) + "</span><ul>" + lines.join("") + "</ul></span>" +
+        '<span class="wr">' + (c.wr !== null ? "<b>" + c.wr.toFixed(1) + "%</b>WR" : "") + "</span></button></li>";
+    }).join("") + "</ol>";
+  }
+
+  function render() { renderMe(); renderEnemies(); renderPicks(); renderResult(); }
 
   /* ---------- Picker ---------- */
   var pk = { target: null, lane: "all" };
@@ -164,11 +195,10 @@
       if (q) return h.name.toLowerCase().indexOf(q) >= 0;
       return pk.lane === "all" || h.lanes.indexOf(pk.lane) >= 0;
     });
-    // Di draft ranked, hero yang sama tidak bisa dipakai dua kali di satu tim.
+    // Di draft ranked, hero yang sudah di-pick (tim mana pun) tidak bisa dipilih lagi.
     var sameTeam = function (h) {
       var t = taken[h.id];
-      if (t === undefined || t === pk.target) return false;
-      return pk.target === "me" ? false : t !== "me";
+      return t !== undefined && t !== pk.target;
     };
     $("pk-grid").innerHTML = list.length ? list.map(function (h) {
       var dis = sameTeam(h);
@@ -184,7 +214,6 @@
       var h = BY_ID[state.me.hero];
       if (h && h.lanes.indexOf(state.me.lane) < 0) state.me.hero = null;
       touch();
-      if (!state.me.hero) openPicker("me");
     });
     $("me-pick").addEventListener("click", function () { openPicker("me"); });
     $("enemy-rows").addEventListener("click", function (ev) {
@@ -210,13 +239,24 @@
         for (var k = pk.target + 1; k < state.enemies.length; k++) if (!state.enemies[k].hero) { openPicker(k); return; }
       }
     });
+    $("rank-chips").addEventListener("click", function (ev) {
+      var b = ev.target.closest("[data-rank]"); if (!b) return;
+      state.rank = b.dataset.rank; touch();
+    });
+    $("picks").addEventListener("click", function (ev) {
+      var b = ev.target.closest("[data-cand]"); if (!b) return;
+      state.me.hero = b.dataset.cand; touch();
+      // Di HP, langsung bawa ke hasil build.
+      if (window.matchMedia && window.matchMedia("(max-width: 860px)").matches) $("result").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
     $("pk-close").addEventListener("click", closePicker);
     $("picker").addEventListener("click", function (ev) { if (ev.target === ev.currentTarget) closePicker(); });
     $("btn-clear").addEventListener("click", function () {
       // Hero lu dipertahankan (kecuali masih contoh), lawan dikosongkan untuk match berikutnya.
       var lane = state.me.lane, hero = state.example ? null : state.me.hero;
+      var rank = state.rank;
       state = blank();
-      state.me.lane = lane; state.me.hero = hero;
+      state.me.lane = lane; state.me.hero = hero; state.rank = rank || "all";
       save(); render();
     });
   }
@@ -224,7 +264,9 @@
   function renderFoot() {
     var m = DATA.meta || {};
     $("patch").textContent = "Patch " + (m.patch || "?") + (m.synced_at ? " · sync " + m.synced_at.slice(0, 10) : " · data awal");
-    $("foot").innerHTML = "Rekomendasi berbasis aturan dari tipe damage dan karakter hero lawan, bukan statistik match. " +
+    $("foot").innerHTML = "Build item berbasis aturan dari tipe damage dan karakter hero lawan. " +
+      "Rekomendasi pick memakai selisih win rate antar hero dari statistik match" +
+      (DATA.counters && DATA.counters.measured_at ? " (diukur " + DATA.counters.measured_at.slice(0, 10) + ", via MLBBDex/arena.rone.dev)" : "") + ". " +
       "Nama & efek item diringkas; cek detail di dalam game. Data roster & item: komunitas (Mobile Legends Wiki, CC BY-SA). " +
       "Mobile Legends: Bang Bang milik Moonton; ini proyek fan, tidak berafiliasi." +
       (m.missing_items && m.missing_items.length ? " <b>Sync terakhir: " + m.missing_items.length + " item di build tidak ada di katalog patch ini, cek data/items.json.</b>" : "");
@@ -232,9 +274,11 @@
 
   function getJSON(p) { return fetch(p, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); }); }
 
-  Promise.all(["data/heroes.json", "data/items.json", "data/builds.json", "data/meta.json"].map(getJSON))
+  // counters.json opsional: tanpa file itu, build tetap jalan dan rekomendasi pick pakai aturan saja.
+  var optional = getJSON("data/counters.json").catch(function () { return null; });
+  Promise.all(["data/heroes.json", "data/items.json", "data/builds.json", "data/meta.json"].map(getJSON).concat([optional]))
     .then(function (res) {
-      DATA = { heroes: res[0].slice().sort(function (a, b) { return a.name.localeCompare(b.name); }), items: res[1], builds: res[2], meta: res[3] };
+      DATA = { heroes: res[0].slice().sort(function (a, b) { return a.name.localeCompare(b.name); }), items: res[1], builds: res[2], meta: res[3], counters: res[4] };
       DATA.heroes.forEach(function (h) { BY_ID[h.id] = h; });
       state = load();
       bind(); renderFoot(); render();

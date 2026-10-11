@@ -9,6 +9,7 @@ ke data/*.json milik Counter Build.
     * mengisi role/lane kalau kosong,
     * menandai item kurasi yang sudah tidak ada di katalog (kemungkinan dihapus/di-rename patch),
     * mengisi URL ikon hero & item yang belum ada (di-hotlink dari MLBBDex),
+    * memperbarui data/counters.json (counter & win rate per rank dari statistik match),
     * mencatat versi patch & waktu sync di meta.json.
 - Tulis atomik + backup .bak, jadi web tidak pernah membaca file setengah jadi.
 
@@ -162,11 +163,14 @@ def load(path, default):
         return default
 
 
-def write_atomic(path, obj):
+def write_atomic(path, obj, compact=False):
     d = os.path.dirname(os.path.abspath(path))
     fd, tmp = tempfile.mkstemp(dir=d, prefix=".tmp-", suffix=".json")
     with os.fdopen(fd, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=1)
+        if compact:
+            json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
+        else:
+            json.dump(obj, f, ensure_ascii=False, indent=1)
     os.chmod(tmp, 0o644)
     if os.path.exists(path):
         shutil.copy2(path, path + ".bak")
@@ -236,6 +240,48 @@ def check_items(items, remote):
     return [iid for iid, it in items.items() if norm(it["name"]) not in by_name]
 
 
+STATS_URL = os.environ.get(
+    "STATS_URL", "https://raw.githubusercontent.com/achedon12/mlbb/main/src/data/game/statistics.json")
+RANKS = ["all", "epic", "legend", "mythic", "honor", "glory"]
+
+
+def fetch_stats():
+    """Statistik match (counter & win rate) yang dikumpulkan MLBBDex dari stats API (arena.rone.dev)."""
+    req = urllib.request.Request(STATS_URL, headers={"User-Agent": UA})
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+            log(f"gagal ambil statistik: {e}")
+            time.sleep(3 * (attempt + 1))
+    return None
+
+
+def build_counters(stats, valid_ids):
+    """Ringkas jadi {hero: {rank: {wr, s: [[lawan, adv]], w: [[lawan, adv]]}}} + win/ban rate."""
+    src = (stats or {}).get("counters") or {}
+    out = {}
+    for hid, by_rank in src.items():
+        if hid not in valid_ids or not isinstance(by_rank, dict):
+            continue
+        row = {}
+        for rk in RANKS:
+            b = by_rank.get(rk)
+            if not isinstance(b, dict):
+                continue
+            pair = lambda lst: [[x["slug"], x["advantage"]] for x in (lst or [])
+                                if x.get("slug") in valid_ids and isinstance(x.get("advantage"), (int, float))]
+            row[rk] = {"wr": b.get("winRate"), "s": pair(b.get("strong")), "w": pair(b.get("weak"))}
+        if row:
+            out[hid] = row
+    rk = (stats or {}).get("rankings") or {}
+    rates = {h: {"wr": v.get("winRate"), "ban": v.get("banRate"), "pick": v.get("pickRate")}
+             for h, v in (rk.get("rates") or {}).items() if h in valid_ids}
+    return {"measured_at": rk.get("measuredAt"), "source": "arena.rone.dev via MLBBDex",
+            "ranks": RANKS, "heroes": out, "rates": rates}
+
+
 def latest_patch(remote):
     best = None
     for p in remote or []:
@@ -290,9 +336,23 @@ def main():
     log(f"item kurasi tidak ditemukan di katalog: {missing or '-'}")
     log(f"patch: {meta.get('patch')} ({meta.get('patch_date')})")
 
+    # Statistik counter: sumber terpisah, gagal di sini tidak menggagalkan sync lain.
+    counters = None
+    old = load(os.path.join(d, "counters.json"), {})
+    stats = fetch_stats()
+    if stats:
+        c = build_counters(stats, {h["id"] for h in heroes})
+        if len(c["heroes"]) >= 100 and (c["measured_at"] or "") >= (old.get("measured_at") or ""):
+            counters = c
+            log(f"counter: {len(c['heroes'])} hero, diukur {c['measured_at']}")
+        else:
+            log("counter: data baru tidak lebih lengkap/baru, pakai yang lama")
+
     if a.dry_run:
         log("dry-run: tidak ada file ditulis")
         return 0
+    if counters:
+        write_atomic(os.path.join(d, "counters.json"), counters, compact=True)
     write_atomic(os.path.join(d, "heroes.json"), heroes)
     write_atomic(os.path.join(d, "items.json"), items)
     write_atomic(os.path.join(d, "meta.json"), meta)

@@ -12,7 +12,17 @@ Web app statis buat nentuin build item counter di Mobile Legends: pilih role + h
    - slot flex diganti item **Counter** (dengan batas slot defensif untuk carry: 1, atau 2 kalau ada lawan fed),
    - boots ikut menyesuaikan (Tough Boots vs CC/magic berat, Warrior Boots vs fisik berat).
 
-Rekomendasi ini rule-based, bukan statistik win rate.
+Build item ini rule-based, bukan statistik win rate.
+
+### Rekomendasi pick (last pick)
+
+Begitu hero lawan diisi, panel **Rekomendasi pick** menampilkan 6 hero terbaik untuk lane lu:
+
+- **Counter statistik** dari `data/counters.json`: selisih win rate hero kandidat saat ketemu tiap lawan (per rank: Semua, Epic, Legend, Mythic, Honor, Glory). Lawan di lane yang sama dengan lu dihitung **dobel**, lawan FED ×1,5.
+- **Aturan komposisi**: misalnya hero ber-CC dapat nilai tambah lawan tim diver, hero damage konsisten lawan tim tanky.
+- **Win rate patch** hero itu sebagai pemberat kecil.
+
+Tap kandidat untuk langsung pakai hero itu; build item ikut menyesuaikan. Komposisi tim sendiri belum dihitung.
 
 ## Struktur
 
@@ -26,6 +36,7 @@ data/heroes.json      roster + tag + archetype  (diperbarui sync untuk hero baru
 data/items.json       item kurasi (nama, kategori, efek ringkas)
 data/builds.json      archetype build
 data/meta.json        versi patch, waktu sync, hero baru, item hilang
+data/counters.json    counter & win rate per rank (statistik match)
 sync/sync.py          tarik data dari API komunitas (stdlib saja)
 deploy/               systemd unit + timer, config nginx, install.sh
 ```
@@ -67,7 +78,9 @@ systemctl list-timers counterbuild-sync.timer                          # jadwal 
 journalctl -u counterbuild-sync -n 50                                  # log
 ```
 
-Sumber: API publik MLBBDex (`https://mlbbdex.com/api/v1/...`), yang datanya berasal dari Mobile Legends Wiki (CC BY-SA). Limit 90 request/menit; sync cuma butuh 3 request. Base URL bisa diganti lewat env `MLBBDEX_BASE`.
+Sumber counter: `statistics.json` dari repo publik MLBBDex (dikumpulkan dari stats API arena.rone.dev, diperbarui mereka sekitar mingguan). URL bisa diganti lewat env `STATS_URL`.
+
+Sumber roster & item: API publik MLBBDex (`https://mlbbdex.com/api/v1/...`), yang datanya berasal dari Mobile Legends Wiki (CC BY-SA). Limit 90 request/menit; sync cuma butuh 3 request. Base URL bisa diganti lewat env `MLBBDEX_BASE`.
 
 Yang dilakukan sync:
 

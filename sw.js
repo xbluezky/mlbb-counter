@@ -1,7 +1,7 @@
 /* Service worker: app shell stale-while-revalidate, data JSON network-first (fallback ke cache saat offline). */
-const VERSION = "cb-v1";
+const VERSION = "cb-v2";
 const SHELL = ["./", "index.html", "app.js", "engine.js", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png"];
-const DATA = ["data/heroes.json", "data/items.json", "data/builds.json", "data/meta.json"];
+const DATA = ["data/heroes.json", "data/items.json", "data/builds.json", "data/meta.json", "data/counters.json"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL.concat(DATA))).then(() => self.skipWaiting()));
