@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync data MLBB Counter Build tiap hari
+
+[Timer]
+OnCalendar=*-*-* 04:17:00
+RandomizedDelaySec=15m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

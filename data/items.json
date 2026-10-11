@@ -1,0 +1,267 @@
+{
+ "warrior_boots": {
+  "name": "Warrior Boots",
+  "cat": "boots",
+  "desc": "Physical def, nambah tiap kena basic attack"
+ },
+ "tough_boots": {
+  "name": "Tough Boots",
+  "cat": "boots",
+  "desc": "Magic def + kurangi durasi CC"
+ },
+ "swift_boots": {
+  "name": "Swift Boots",
+  "cat": "boots",
+  "desc": "Attack speed"
+ },
+ "arcane_boots": {
+  "name": "Arcane Boots",
+  "cat": "boots",
+  "desc": "Magic penetration"
+ },
+ "magic_shoes": {
+  "name": "Magic Shoes",
+  "cat": "boots",
+  "desc": "Cooldown reduction"
+ },
+ "rapid_boots": {
+  "name": "Rapid Boots",
+  "cat": "boots",
+  "desc": "Movement speed tinggi di luar combat"
+ },
+ "windtalker": {
+  "name": "Windtalker",
+  "cat": "attack",
+  "desc": "Attack speed + movement, basic attack berantai"
+ },
+ "berserkers_fury": {
+  "name": "Berserker's Fury",
+  "cat": "attack",
+  "desc": "Crit damage besar"
+ },
+ "haas_claws": {
+  "name": "Haas's Claws",
+  "cat": "attack",
+  "desc": "Lifesteal + crit"
+ },
+ "blade_of_despair": {
+  "name": "Blade of Despair",
+  "cat": "attack",
+  "desc": "Physical attack besar, bonus ke target HP rendah"
+ },
+ "scarlet_phantom": {
+  "name": "Scarlet Phantom",
+  "cat": "attack",
+  "desc": "Crit chance + attack speed"
+ },
+ "golden_staff": {
+  "name": "Golden Staff",
+  "cat": "attack",
+  "desc": "Basic attack memicu efek on-hit berulang"
+ },
+ "corrosion_scythe": {
+  "name": "Corrosion Scythe",
+  "cat": "attack",
+  "desc": "Attack speed + slow lawan"
+ },
+ "demon_hunter_sword": {
+  "name": "Demon Hunter Sword",
+  "cat": "attack",
+  "desc": "Damage tambahan berbasis HP target, anti tank"
+ },
+ "malefic_roar": {
+  "name": "Malefic Roar",
+  "cat": "attack",
+  "desc": "Physical penetration, makin kuat ke def tinggi"
+ },
+ "sea_halberd": {
+  "name": "Sea Halberd",
+  "cat": "attack",
+  "desc": "Anti-heal fisik: potong regen & lifesteal target"
+ },
+ "hunter_strike": {
+  "name": "Hunter Strike",
+  "cat": "attack",
+  "desc": "Physical pen + burst movement speed"
+ },
+ "blade_of_the_heptaseas": {
+  "name": "Blade of the Heptaseas",
+  "cat": "attack",
+  "desc": "Bonus damage serangan pertama dari luar combat"
+ },
+ "endless_battle": {
+  "name": "Endless Battle",
+  "cat": "attack",
+  "desc": "True damage setelah skill, item hybrid"
+ },
+ "war_axe": {
+  "name": "War Axe",
+  "cat": "attack",
+  "desc": "Damage naik selama combat panjang"
+ },
+ "bloodlust_axe": {
+  "name": "Bloodlust Axe",
+  "cat": "attack",
+  "desc": "Spell vamp untuk skill fisik"
+ },
+ "great_dragon_spear": {
+  "name": "Great Dragon Spear",
+  "cat": "attack",
+  "desc": "Crit + movement setelah ultimate"
+ },
+ "rose_gold_meteor": {
+  "name": "Rose Gold Meteor",
+  "cat": "attack",
+  "desc": "Shield saat HP rendah vs magic"
+ },
+ "wind_of_nature": {
+  "name": "Wind of Nature",
+  "cat": "attack",
+  "desc": "Aktif: kebal damage fisik sebentar"
+ },
+ "clock_of_destiny": {
+  "name": "Clock of Destiny",
+  "cat": "magic",
+  "desc": "HP + magic power bertumpuk"
+ },
+ "lightning_truncheon": {
+  "name": "Lightning Truncheon",
+  "cat": "magic",
+  "desc": "Burst petir tiap beberapa detik"
+ },
+ "genius_wand": {
+  "name": "Genius Wand",
+  "cat": "magic",
+  "desc": "Magic pen + potong magic def target"
+ },
+ "holy_crystal": {
+  "name": "Holy Crystal",
+  "cat": "magic",
+  "desc": "Magic power besar"
+ },
+ "blood_wings": {
+  "name": "Blood Wings",
+  "cat": "magic",
+  "desc": "Magic power + shield"
+ },
+ "divine_glaive": {
+  "name": "Divine Glaive",
+  "cat": "magic",
+  "desc": "Magic pen persen, anti magic def tinggi"
+ },
+ "glowing_wand": {
+  "name": "Glowing Wand",
+  "cat": "magic",
+  "desc": "Burn berbasis HP target"
+ },
+ "ice_queen_wand": {
+  "name": "Ice Queen Wand",
+  "cat": "magic",
+  "desc": "Slow + spell vamp"
+ },
+ "concentrated_energy": {
+  "name": "Concentrated Energy",
+  "cat": "magic",
+  "desc": "Spell vamp + HP"
+ },
+ "fleeting_time": {
+  "name": "Fleeting Time",
+  "cat": "magic",
+  "desc": "Kurangi cooldown ultimate setelah takedown"
+ },
+ "starlium_scythe": {
+  "name": "Starlium Scythe",
+  "cat": "magic",
+  "desc": "Skill memberi true damage tambahan"
+ },
+ "enchanted_talisman": {
+  "name": "Enchanted Talisman",
+  "cat": "magic",
+  "desc": "Cooldown + regen mana"
+ },
+ "feather_of_heaven": {
+  "name": "Feather of Heaven",
+  "cat": "magic",
+  "desc": "Attack speed untuk hero magic basic attack"
+ },
+ "necklace_of_durance": {
+  "name": "Necklace of Durance",
+  "cat": "magic",
+  "desc": "Anti-heal magic: potong regen & spell vamp"
+ },
+ "winter_crown": {
+  "name": "Winter Crown",
+  "cat": "magic",
+  "desc": "Aktif: membeku, kebal semua damage sebentar"
+ },
+ "flask_of_the_oasis": {
+  "name": "Flask of the Oasis",
+  "cat": "magic",
+  "desc": "Tambah efek heal & shield ke teman"
+ },
+ "athenas_shield": {
+  "name": "Athena's Shield",
+  "cat": "defense",
+  "desc": "Magic def + shield saat kena burst magic"
+ },
+ "radiant_armor": {
+  "name": "Radiant Armor",
+  "cat": "defense",
+  "desc": "Magic def menumpuk saat terus kena magic"
+ },
+ "antique_cuirass": {
+  "name": "Antique Cuirass",
+  "cat": "defense",
+  "desc": "Physical def + kurangi attack lawan yang mukul"
+ },
+ "blade_armor": {
+  "name": "Blade Armor",
+  "cat": "defense",
+  "desc": "Physical def + pantulkan damage basic attack"
+ },
+ "dominance_ice": {
+  "name": "Dominance Ice",
+  "cat": "defense",
+  "desc": "Anti-heal aura + turunkan attack speed lawan sekitar"
+ },
+ "brute_force_breastplate": {
+  "name": "Brute Force Breastplate",
+  "cat": "defense",
+  "desc": "Def + movement bertumpuk saat combat"
+ },
+ "twilight_armor": {
+  "name": "Twilight Armor",
+  "cat": "defense",
+  "desc": "Kurangi damage dari pukulan besar"
+ },
+ "oracle": {
+  "name": "Oracle",
+  "cat": "defense",
+  "desc": "Naikkan heal & shield yang diterima"
+ },
+ "thunder_belt": {
+  "name": "Thunder Belt",
+  "cat": "defense",
+  "desc": "HP + def, skill berikutnya nambah damage & slow"
+ },
+ "guardian_helmet": {
+  "name": "Guardian Helmet",
+  "cat": "defense",
+  "desc": "HP besar + regen cepat"
+ },
+ "queens_wings": {
+  "name": "Queen's Wings",
+  "cat": "defense",
+  "desc": "Kurangi damage + spell vamp saat HP rendah"
+ },
+ "immortality": {
+  "name": "Immortality",
+  "cat": "defense",
+  "desc": "Bangkit sekali setelah mati"
+ },
+ "cursed_helmet": {
+  "name": "Cursed Helmet",
+  "cat": "defense",
+  "desc": "Magic def + burn aura (bagus buat clear wave)"
+ }
+}

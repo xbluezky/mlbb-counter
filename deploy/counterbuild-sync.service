@@ -1,0 +1,16 @@
+[Unit]
+Description=Sync data MLBB Counter Build dari API komunitas
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+ExecStart=/usr/bin/python3 /opt/counterbuild/sync/sync.py --data-dir /var/www/counterbuild/data
+# Hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/var/www/counterbuild/data
+ProtectHome=yes
+PrivateTmp=yes

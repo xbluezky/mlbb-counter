@@ -1,0 +1,9 @@
+{
+ "patch": "2.2.16",
+ "patch_date": "2026-09-16",
+ "synced_at": null,
+ "source": "seed",
+ "note": "Data awal disusun manual. Jalankan sync/sync.py di server untuk menarik roster & item terbaru.",
+ "new_heroes": [],
+ "missing_items": []
+}

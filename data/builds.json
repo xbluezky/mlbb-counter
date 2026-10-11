@@ -1,0 +1,218 @@
+{
+ "mm_crit": {
+  "label": "Marksman crit",
+  "kind": "carry_phys",
+  "items": [
+   "swift_boots",
+   "windtalker",
+   "berserkers_fury",
+   "blade_of_despair",
+   "haas_claws",
+   "malefic_roar"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "mm_onhit": {
+  "label": "Marksman on-hit",
+  "kind": "carry_phys",
+  "items": [
+   "swift_boots",
+   "demon_hunter_sword",
+   "corrosion_scythe",
+   "golden_staff",
+   "malefic_roar",
+   "haas_claws"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "mm_magic": {
+  "label": "Marksman magic",
+  "kind": "carry_magic",
+  "items": [
+   "arcane_boots",
+   "feather_of_heaven",
+   "starlium_scythe",
+   "genius_wand",
+   "holy_crystal",
+   "divine_glaive"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "crit_jungle": {
+  "label": "Jungler crit",
+  "kind": "carry_phys",
+  "items": [
+   "rapid_boots",
+   "windtalker",
+   "berserkers_fury",
+   "great_dragon_spear",
+   "blade_of_despair",
+   "malefic_roar"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "phys_assassin": {
+  "label": "Assassin fisik",
+  "kind": "carry_phys",
+  "items": [
+   "rapid_boots",
+   "hunter_strike",
+   "blade_of_the_heptaseas",
+   "malefic_roar",
+   "blade_of_despair",
+   "immortality"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "fighter_phys": {
+  "label": "Fighter damage",
+  "kind": "bruiser_phys",
+  "items": [
+   "warrior_boots",
+   "war_axe",
+   "hunter_strike",
+   "queens_wings",
+   "malefic_roar",
+   "brute_force_breastplate"
+  ],
+  "flex": [
+   3,
+   4,
+   5
+  ]
+ },
+ "fighter_tank": {
+  "label": "Fighter tanky",
+  "kind": "frontline",
+  "items": [
+   "warrior_boots",
+   "war_axe",
+   "dominance_ice",
+   "thunder_belt",
+   "oracle",
+   "immortality"
+  ],
+  "flex": [
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "magic_bruiser": {
+  "label": "Bruiser magic",
+  "kind": "bruiser_magic",
+  "items": [
+   "tough_boots",
+   "concentrated_energy",
+   "starlium_scythe",
+   "feather_of_heaven",
+   "oracle",
+   "immortality"
+  ],
+  "flex": [
+   3,
+   4,
+   5
+  ]
+ },
+ "mage_burst": {
+  "label": "Mage burst",
+  "kind": "carry_magic",
+  "items": [
+   "arcane_boots",
+   "clock_of_destiny",
+   "lightning_truncheon",
+   "holy_crystal",
+   "genius_wand",
+   "divine_glaive"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "mage_dps": {
+  "label": "Mage sustain damage",
+  "kind": "carry_magic",
+  "items": [
+   "arcane_boots",
+   "enchanted_talisman",
+   "clock_of_destiny",
+   "genius_wand",
+   "glowing_wand",
+   "divine_glaive"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "mage_assassin": {
+  "label": "Assassin magic",
+  "kind": "carry_magic",
+  "items": [
+   "arcane_boots",
+   "starlium_scythe",
+   "genius_wand",
+   "holy_crystal",
+   "divine_glaive",
+   "blood_wings"
+  ],
+  "flex": [
+   4,
+   5
+  ]
+ },
+ "tank_roam": {
+  "label": "Tank roam",
+  "kind": "frontline",
+  "items": [
+   "tough_boots",
+   "antique_cuirass",
+   "athenas_shield",
+   "dominance_ice",
+   "oracle",
+   "immortality"
+  ],
+  "flex": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "support_heal": {
+  "label": "Support healer",
+  "kind": "support",
+  "items": [
+   "tough_boots",
+   "flask_of_the_oasis",
+   "fleeting_time",
+   "oracle",
+   "athenas_shield",
+   "immortality"
+  ],
+  "flex": [
+   3,
+   4,
+   5
+  ]
+ }
+}

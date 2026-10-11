@@ -1,0 +1,2366 @@
+[
+ {
+  "id": "aamon",
+  "name": "Aamon",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "akai",
+  "name": "Akai",
+  "lanes": [
+   "roam",
+   "jungle"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "aldous",
+  "name": "Aldous",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "tank"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "alice",
+  "name": "Alice",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Mage",
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "heal",
+   "dps",
+   "tank",
+   "dive"
+  ],
+  "arch": "magic_bruiser",
+  "source": "curated"
+ },
+ {
+  "id": "alpha",
+  "name": "Alpha",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps",
+   "dive",
+   "true"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "alucard",
+  "name": "Alucard",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter",
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "angela",
+  "name": "Angela",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "heal",
+   "shield"
+  ],
+  "arch": "support_heal",
+  "source": "curated"
+ },
+ {
+  "id": "argus",
+  "name": "Argus",
+  "lanes": [
+   "exp",
+   "gold"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "atkspd"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "arlott",
+  "name": "Arlott",
+  "lanes": [
+   "exp",
+   "roam"
+  ],
+  "roles": [
+   "Fighter",
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "cc",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "atlas",
+  "name": "Atlas",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "aulus",
+  "name": "Aulus",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "atkspd",
+   "tank"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "aurora",
+  "name": "Aurora",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "badang",
+  "name": "Badang",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "cc"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "balmond",
+  "name": "Balmond",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps",
+   "tank",
+   "true"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "bane",
+  "name": "Bane",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter",
+   "Mage"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "poke",
+   "burst"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "barats",
+  "name": "Barats",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Tank",
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "baxia",
+  "name": "Baxia",
+  "lanes": [
+   "roam",
+   "jungle"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "beatrix",
+  "name": "Beatrix",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "poke",
+   "crit"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "belerick",
+  "name": "Belerick",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "benedetta",
+  "name": "Benedetta",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Assassin",
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "brody",
+  "name": "Brody",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "poke"
+  ],
+  "arch": "mm_onhit",
+  "source": "curated"
+ },
+ {
+  "id": "bruno",
+  "name": "Bruno",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "crit",
+   "burst"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "carmilla",
+  "name": "Carmilla",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support",
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc",
+   "heal"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "cecilion",
+  "name": "Cecilion",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "dps"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "chang-e",
+  "name": "Chang'e",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "dps",
+   "shield"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "chip",
+  "name": "Chip",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank",
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "shield",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "chou",
+  "name": "Chou",
+  "lanes": [
+   "exp",
+   "roam"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "cc",
+   "burst",
+   "dive",
+   "tank"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "cici",
+  "name": "Cici",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "claude",
+  "name": "Claude",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "crit",
+   "dps",
+   "dive"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "clint",
+  "name": "Clint",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "poke"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "cyclops",
+  "name": "Cyclops",
+  "lanes": [
+   "mid",
+   "jungle"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "diggie",
+  "name": "Diggie",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "cc"
+  ],
+  "arch": "support_heal",
+  "source": "curated"
+ },
+ {
+  "id": "dyrroth",
+  "name": "Dyrroth",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "heal",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "edith",
+  "name": "Edith",
+  "lanes": [
+   "exp",
+   "roam"
+  ],
+  "roles": [
+   "Tank",
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc",
+   "shield",
+   "atkspd"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "esmeralda",
+  "name": "Esmeralda",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Mage",
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "shield",
+   "heal",
+   "dps",
+   "tank"
+  ],
+  "arch": "magic_bruiser",
+  "source": "curated"
+ },
+ {
+  "id": "estes",
+  "name": "Estes",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "heal"
+  ],
+  "arch": "support_heal",
+  "source": "curated"
+ },
+ {
+  "id": "eudora",
+  "name": "Eudora",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "fanny",
+  "name": "Fanny",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "faramis",
+  "name": "Faramis",
+  "lanes": [
+   "mid",
+   "roam"
+  ],
+  "roles": [
+   "Support",
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dps",
+   "heal"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "floryn",
+  "name": "Floryn",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "heal"
+  ],
+  "arch": "support_heal",
+  "source": "curated"
+ },
+ {
+  "id": "franco",
+  "name": "Franco",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "fredrinn",
+  "name": "Fredrinn",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter",
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc",
+   "burst"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "freya",
+  "name": "Freya",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "shield",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "gatotkaca",
+  "name": "Gatotkaca",
+  "lanes": [
+   "roam",
+   "exp"
+  ],
+  "roles": [
+   "Tank",
+   "Fighter"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "gloo",
+  "name": "Gloo",
+  "lanes": [
+   "roam",
+   "exp"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc",
+   "heal"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "gord",
+  "name": "Gord",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dps",
+   "poke"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "granger",
+  "name": "Granger",
+  "lanes": [
+   "gold",
+   "jungle"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "crit"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "grock",
+  "name": "Grock",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc",
+   "burst"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "guinevere",
+  "name": "Guinevere",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc",
+   "dive"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "gusion",
+  "name": "Gusion",
+  "lanes": [
+   "jungle",
+   "mid"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "hanabi",
+  "name": "Hanabi",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "crit",
+   "shield"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "hanzo",
+  "name": "Hanzo",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "heal"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "harith",
+  "name": "Harith",
+  "lanes": [
+   "mid",
+   "gold"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dps",
+   "dive",
+   "shield"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "harley",
+  "name": "Harley",
+  "lanes": [
+   "jungle",
+   "mid"
+  ],
+  "roles": [
+   "Assassin",
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "hayabusa",
+  "name": "Hayabusa",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "helcurt",
+  "name": "Helcurt",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "hilda",
+  "name": "Hilda",
+  "lanes": [
+   "exp",
+   "roam"
+  ],
+  "roles": [
+   "Fighter",
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "tank",
+   "burst"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "hylos",
+  "name": "Hylos",
+  "lanes": [
+   "roam",
+   "exp"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc",
+   "heal"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "irithel",
+  "name": "Irithel",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "crit",
+   "dps"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "ixia",
+  "name": "Ixia",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "heal",
+   "poke"
+  ],
+  "arch": "mm_onhit",
+  "source": "curated"
+ },
+ {
+  "id": "jawhead",
+  "name": "Jawhead",
+  "lanes": [
+   "roam",
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "cc",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "johnson",
+  "name": "Johnson",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "tank",
+   "cc",
+   "shield",
+   "burst"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "joy",
+  "name": "Joy",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "julian",
+  "name": "Julian",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter",
+   "Mage"
+  ],
+  "dmg": "mixed",
+  "tags": [
+   "burst",
+   "dive",
+   "heal"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated",
+  "review": true
+ },
+ {
+  "id": "kadita",
+  "name": "Kadita",
+  "lanes": [
+   "mid",
+   "roam"
+  ],
+  "roles": [
+   "Mage",
+   "Assassin"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc",
+   "dive"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "kagura",
+  "name": "Kagura",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "poke"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "kaja",
+  "name": "Kaja",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Fighter",
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "cc",
+   "tank"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "kalea",
+  "name": "Kalea",
+  "lanes": [
+   "roam",
+   "exp"
+  ],
+  "roles": [
+   "Support",
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated",
+  "review": true
+ },
+ {
+  "id": "karina",
+  "name": "Karina",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "dive",
+   "true"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "karrie",
+  "name": "Karrie",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "true",
+   "atkspd"
+  ],
+  "arch": "mm_onhit",
+  "source": "curated"
+ },
+ {
+  "id": "khaleed",
+  "name": "Khaleed",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps",
+   "cc"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "khufra",
+  "name": "Khufra",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "kimmy",
+  "name": "Kimmy",
+  "lanes": [
+   "gold",
+   "mid"
+  ],
+  "roles": [
+   "Marksman",
+   "Mage"
+  ],
+  "dmg": "mixed",
+  "tags": [
+   "dps",
+   "poke"
+  ],
+  "arch": "mm_magic",
+  "source": "curated"
+ },
+ {
+  "id": "lancelot",
+  "name": "Lancelot",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "lapu-lapu",
+  "name": "Lapu-Lapu",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "cc"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "layla",
+  "name": "Layla",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "crit",
+   "poke",
+   "dps"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "leomord",
+  "name": "Leomord",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "lesley",
+  "name": "Lesley",
+  "lanes": [
+   "gold",
+   "jungle"
+  ],
+  "roles": [
+   "Marksman",
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "crit",
+   "poke"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "ling",
+  "name": "Ling",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "crit",
+   "dive",
+   "burst"
+  ],
+  "arch": "crit_jungle",
+  "source": "curated"
+ },
+ {
+  "id": "lolita",
+  "name": "Lolita",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank",
+   "Support"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc",
+   "shield"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "lukas",
+  "name": "Lukas",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "tank",
+   "cc"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "lunox",
+  "name": "Lunox",
+  "lanes": [
+   "mid",
+   "exp"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "dps",
+   "heal",
+   "dive"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "luo-yi",
+  "name": "Luo Yi",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "cc",
+   "poke",
+   "dps"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "lylia",
+  "name": "Lylia",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "dps"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "martis",
+  "name": "Martis",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "cc",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "masha",
+  "name": "Masha",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "tank",
+   "heal"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated",
+  "review": true
+ },
+ {
+  "id": "mathilda",
+  "name": "Mathilda",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support",
+   "Assassin"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "shield",
+   "dive",
+   "burst"
+  ],
+  "arch": "support_heal",
+  "source": "curated"
+ },
+ {
+  "id": "melissa",
+  "name": "Melissa",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "dps"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "minotaur",
+  "name": "Minotaur",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc",
+   "heal"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "minsitthar",
+  "name": "Minsitthar",
+  "lanes": [
+   "roam",
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "cc",
+   "tank"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "miya",
+  "name": "Miya",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "crit",
+   "dps"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "moskov",
+  "name": "Moskov",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "crit",
+   "dps"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "nana",
+  "name": "Nana",
+  "lanes": [
+   "mid",
+   "roam"
+  ],
+  "roles": [
+   "Mage",
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "cc",
+   "poke"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "natalia",
+  "name": "Natalia",
+  "lanes": [
+   "roam",
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "natan",
+  "name": "Natan",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dps",
+   "atkspd"
+  ],
+  "arch": "mm_magic",
+  "source": "curated"
+ },
+ {
+  "id": "nolan",
+  "name": "Nolan",
+  "lanes": [
+   "jungle"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "novaria",
+  "name": "Novaria",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "burst"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "obsidian",
+  "name": "Obsidian",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "burst"
+  ],
+  "arch": "mm_crit",
+  "source": "curated",
+  "review": true
+ },
+ {
+  "id": "odette",
+  "name": "Odette",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "paquito",
+  "name": "Paquito",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "shield",
+   "dive"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "pharsa",
+  "name": "Pharsa",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "burst"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "phoveus",
+  "name": "Phoveus",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dive",
+   "dps"
+  ],
+  "arch": "magic_bruiser",
+  "source": "curated"
+ },
+ {
+  "id": "popol-and-kupa",
+  "name": "Popol and Kupa",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "cc",
+   "dps",
+   "atkspd"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "rafaela",
+  "name": "Rafaela",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Support"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "heal"
+  ],
+  "arch": "support_heal",
+  "source": "curated"
+ },
+ {
+  "id": "roger",
+  "name": "Roger",
+  "lanes": [
+   "jungle",
+   "gold"
+  ],
+  "roles": [
+   "Fighter",
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "ruby",
+  "name": "Ruby",
+  "lanes": [
+   "exp",
+   "roam"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "cc",
+   "tank"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "saber",
+  "name": "Saber",
+  "lanes": [
+   "jungle",
+   "roam"
+  ],
+  "roles": [
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "selena",
+  "name": "Selena",
+  "lanes": [
+   "roam",
+   "mid"
+  ],
+  "roles": [
+   "Assassin",
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc"
+  ],
+  "arch": "mage_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "silvanna",
+  "name": "Silvanna",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "cc",
+   "dps",
+   "heal"
+  ],
+  "arch": "magic_bruiser",
+  "source": "curated"
+ },
+ {
+  "id": "sun",
+  "name": "Sun",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "atkspd"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "suyou",
+  "name": "Suyou",
+  "lanes": [
+   "jungle",
+   "exp"
+  ],
+  "roles": [
+   "Assassin",
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "terizla",
+  "name": "Terizla",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc",
+   "burst"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "thamuz",
+  "name": "Thamuz",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps",
+   "tank"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "tigreal",
+  "name": "Tigreal",
+  "lanes": [
+   "roam"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "tank",
+   "cc"
+  ],
+  "arch": "tank_roam",
+  "source": "curated"
+ },
+ {
+  "id": "uranus",
+  "name": "Uranus",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Tank"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "heal",
+   "tank"
+  ],
+  "arch": "fighter_tank",
+  "source": "curated"
+ },
+ {
+  "id": "vale",
+  "name": "Vale",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "cc",
+   "poke"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "valentina",
+  "name": "Valentina",
+  "lanes": [
+   "mid",
+   "exp"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "heal",
+   "dps"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "valir",
+  "name": "Valir",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "cc"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "vexana",
+  "name": "Vexana",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "poke"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "wanwan",
+  "name": "Wanwan",
+  "lanes": [
+   "gold"
+  ],
+  "roles": [
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "crit",
+   "dive",
+   "dps"
+  ],
+  "arch": "mm_crit",
+  "source": "curated"
+ },
+ {
+  "id": "x-borg",
+  "name": "X.Borg",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "shield",
+   "true"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "xavier",
+  "name": "Xavier",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "burst"
+  ],
+  "arch": "mage_burst",
+  "source": "curated"
+ },
+ {
+  "id": "yi-sun-shin",
+  "name": "Yi Sun-shin",
+  "lanes": [
+   "jungle",
+   "gold"
+  ],
+  "roles": [
+   "Assassin",
+   "Marksman"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "dps",
+   "crit"
+  ],
+  "arch": "crit_jungle",
+  "source": "curated"
+ },
+ {
+  "id": "yin",
+  "name": "Yin",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "burst",
+   "dive"
+  ],
+  "arch": "phys_assassin",
+  "source": "curated"
+ },
+ {
+  "id": "yu-zhong",
+  "name": "Yu Zhong",
+  "lanes": [
+   "exp"
+  ],
+  "roles": [
+   "Fighter"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "heal",
+   "dps",
+   "dive",
+   "tank"
+  ],
+  "arch": "fighter_phys",
+  "source": "curated"
+ },
+ {
+  "id": "yve",
+  "name": "Yve",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "poke",
+   "dps",
+   "cc"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "zetian",
+  "name": "Zetian",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "poke"
+  ],
+  "arch": "mage_burst",
+  "source": "curated",
+  "review": true
+ },
+ {
+  "id": "zhask",
+  "name": "Zhask",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dps",
+   "poke"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "zhuxin",
+  "name": "Zhuxin",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "dps",
+   "cc"
+  ],
+  "arch": "mage_dps",
+  "source": "curated"
+ },
+ {
+  "id": "zilong",
+  "name": "Zilong",
+  "lanes": [
+   "exp",
+   "jungle"
+  ],
+  "roles": [
+   "Fighter",
+   "Assassin"
+  ],
+  "dmg": "phys",
+  "tags": [
+   "atkspd",
+   "dps",
+   "dive",
+   "crit"
+  ],
+  "arch": "crit_jungle",
+  "source": "curated"
+ }
+]

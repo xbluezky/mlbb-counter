@@ -1,0 +1,41 @@
+name: Sync data MLBB
+
+on:
+  schedule:
+    - cron: "17 21 * * *"   # 04:17 WIB setiap hari (cron GitHub pakai UTC)
+  workflow_dispatch: {}      # bisa dijalankan manual dari tab Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-data
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Jalankan sync
+        run: python3 sync/sync.py --data-dir data
+
+      - name: Commit kalau ada perubahan
+        run: |
+          rm -f data/*.bak
+          # synced_at selalu berubah; commit hanya kalau isi data lain ikut berubah
+          if git diff --quiet -- data/heroes.json && [ "$(git diff -U0 -- data/meta.json | grep -c '^[+-] ' )" -le 2 ]; then
+            echo "Tidak ada perubahan berarti."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: sync $(date -u +%Y-%m-%d)"
+          git push
