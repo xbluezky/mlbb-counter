@@ -1,5 +1,5 @@
 /* Service worker: app shell stale-while-revalidate, data JSON network-first (fallback ke cache saat offline). */
-const VERSION = "cb-v2";
+const VERSION = "cb-v3";
 const SHELL = ["./", "index.html", "app.js", "engine.js", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png"];
 const DATA = ["data/heroes.json", "data/items.json", "data/builds.json", "data/meta.json", "data/counters.json"];
 

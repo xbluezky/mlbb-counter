@@ -15,6 +15,7 @@
       { lane: "gold", hero: "claude", fed: false },
       { lane: "roam", hero: "estes", fed: false }
     ],
+    allies: { exp: "terizla", jungle: "fanny", mid: "kagura", roam: "tigreal" },
     example: true,
     rank: "all"
   };
@@ -22,10 +23,13 @@
 
   function blank() {
     return { me: { lane: "gold", hero: null },
-      enemies: LANES.map(function (l) { return { lane: l, hero: null, fed: false }; }), example: false, rank: "all" };
+      enemies: LANES.map(function (l) { return { lane: l, hero: null, fed: false }; }), allies: {}, example: false, rank: "all" };
   }
   function load() {
-    try { var s = JSON.parse(localStorage.getItem(STORE_KEY)); if (s && s.me && s.enemies) return s; } catch (e) {}
+    try {
+      var s = JSON.parse(localStorage.getItem(STORE_KEY));
+      if (s && s.me && s.enemies) { if (!s.allies) s.allies = {}; return s; }
+    } catch (e) {}
     return JSON.parse(JSON.stringify(EXAMPLE));
   }
   function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {} }
@@ -56,6 +60,29 @@
   function itemName(id) { return (DATA.items[id] && DATA.items[id].name) || id; }
 
   /* ---------- Draft board ---------- */
+  function allyList() {
+    return LANES.filter(function (l) { return l !== state.me.lane && state.allies[l]; })
+      .map(function (l) { return { hero: BY_ID[state.allies[l]], lane: l }; })
+      .filter(function (a) { return a.hero; });
+  }
+  function enemyList() {
+    return state.enemies.map(function (e) { return { hero: BY_ID[e.hero], fed: e.fed, lane: e.lane }; });
+  }
+
+  function renderAllies() {
+    $("ally-rows").innerHTML = LANES.filter(function (l) { return l !== state.me.lane; }).map(function (l) {
+      var h = BY_ID[state.allies[l]];
+      var pick = h
+        ? avatar(h) + '<span class="txt"><span class="nm">' + esc(h.name) + '</span><span class="sub">' + esc(h.roles.join(" / ")) + " · " + dmgLabel(h) + "</span></span>"
+        : '<span class="av" aria-hidden="true">+</span><span class="txt"><span class="nm">Pilih teman</span><span class="sub">Lane ' + LL[l] + "</span></span>";
+      return '<div class="row"><span class="lane-tag">' + LL[l] + '</span><button type="button" class="pick' + (h ? " filled" : "") + '" data-ally="' + l + '">' + pick + "</button></div>";
+    }).join("");
+    var t = E.teamProfile(allyList());
+    $("team-sum").textContent = t.n
+      ? t.n + "/4 teman · fisik " + Math.round(t.physShare * 100) + "% · frontline " + t.front
+      : "Opsional, buat sinergi & keseimbangan tim";
+  }
+
   function renderMe() {
     $("me-lanes").innerHTML = LANES.map(function (l) {
       return '<button type="button" class="chip" data-lane="' + l + '" aria-pressed="' + (state.me.lane === l) + '">' + LL[l] + "</button>";
@@ -89,8 +116,8 @@
       box.innerHTML = '<div class="empty">Pilih hero lu dulu, terus isi hero lawan.<br>Build counter muncul di sini otomatis.</div>';
       return;
     }
-    var enemies = state.enemies.map(function (e) { return { hero: BY_ID[e.hero], fed: e.fed, lane: e.lane }; });
-    var r = E.recommend({ me: Object.assign({ lane: state.me.lane }, me), enemies: enemies, data: DATA });
+    var enemies = enemyList();
+    var r = E.recommend({ me: Object.assign({ lane: state.me.lane }, me), enemies: enemies, allies: allyList(), data: DATA });
     if (!r) { box.innerHTML = '<div class="empty">Build untuk hero ini belum ada di data.</div>'; return; }
 
     var picked = enemies.filter(function (e) { return e.hero; }).length;
@@ -145,8 +172,7 @@
       return '<button type="button" class="chip" data-rank="' + r + '" aria-pressed="' + ((state.rank || "all") === r) + '">' + (RANK_LABEL[r] || r) + "</button>";
     }).join("");
     $("rank-chips").hidden = !ranks.length;
-    var enemies = state.enemies.map(function (e) { return { hero: BY_ID[e.hero], fed: e.fed, lane: e.lane }; });
-    var r = E.recommendPicks({ lane: lane, enemies: enemies, data: DATA, rank: state.rank || "all", limit: 6 });
+    var r = E.recommendPicks({ lane: lane, enemies: enemyList(), allies: allyList(), data: DATA, rank: state.rank || "all", limit: 6 });
     if (!r.picks.length) {
       $("picks").innerHTML = '<p class="picks-empty">Isi hero lawan dulu. Rekomendasi hero ' + LL[lane] + " muncul di sini, terutama yang unggul lawan musuh di lane lu.</p>";
       return;
@@ -165,15 +191,16 @@
     }).join("") + "</ol>";
   }
 
-  function render() { renderMe(); renderEnemies(); renderPicks(); renderResult(); }
+  function render() { renderMe(); renderAllies(); renderEnemies(); renderPicks(); renderResult(); }
 
   /* ---------- Picker ---------- */
   var pk = { target: null, lane: "all" };
   function openPicker(target) {
     pk.target = target;
-    var lane = target === "me" ? state.me.lane : state.enemies[target].lane;
+    var isAlly = typeof target === "string" && target.indexOf("a:") === 0;
+    var lane = target === "me" ? state.me.lane : isAlly ? target.slice(2) : state.enemies[target].lane;
     pk.lane = lane;
-    $("pk-title").textContent = target === "me" ? "Hero lu" : "Lawan · " + LL[lane];
+    $("pk-title").textContent = target === "me" ? "Hero lu" : isAlly ? "Teman · " + LL[lane] : "Lawan · " + LL[lane];
     $("pk-q").value = "";
     renderPicker();
     var d = $("picker");
@@ -190,6 +217,7 @@
     var q = $("pk-q").value.trim().toLowerCase();
     var taken = {};
     if (state.me.hero) taken[state.me.hero] = "me";
+    LANES.forEach(function (l) { if (l !== state.me.lane && state.allies[l]) taken[state.allies[l]] = "a:" + l; });
     state.enemies.forEach(function (e, i) { if (e.hero) taken[e.hero] = i; });
     var list = DATA.heroes.filter(function (h) {
       if (q) return h.name.toLowerCase().indexOf(q) >= 0;
@@ -216,6 +244,9 @@
       touch();
     });
     $("me-pick").addEventListener("click", function () { openPicker("me"); });
+    $("ally-rows").addEventListener("click", function (ev) {
+      var b = ev.target.closest("[data-ally]"); if (b) openPicker("a:" + b.dataset.ally);
+    });
     $("enemy-rows").addEventListener("click", function (ev) {
       var f = ev.target.closest("[data-fed]");
       if (f) { var e = state.enemies[+f.dataset.fed]; e.fed = !e.fed; touch(); return; }
@@ -230,13 +261,21 @@
     $("pk-grid").addEventListener("click", function (ev) {
       var b = ev.target.closest("[data-hero]"); if (!b || b.disabled) return;
       var id = b.dataset.hero;
-      if (pk.target === "me") state.me.hero = id;
-      else { state.enemies[pk.target].hero = id; state.enemies[pk.target].fed = false; }
+      var tgt = pk.target;
+      if (tgt === "me") state.me.hero = id;
+      else if (typeof tgt === "string") state.allies[tgt.slice(2)] = id;
+      else { state.enemies[tgt].hero = id; state.enemies[tgt].fed = false; }
       closePicker();
       touch();
+      // Lanjut ke slot teman kosong berikutnya.
+      if (typeof tgt === "string" && tgt !== "me") {
+        var rest = LANES.filter(function (l) { return l !== state.me.lane && !state.allies[l]; });
+        var after = rest.filter(function (l) { return LANES.indexOf(l) > LANES.indexOf(tgt.slice(2)); });
+        if (after.length) { openPicker("a:" + after[0]); return; }
+      }
       // Lanjut otomatis ke slot lawan kosong berikutnya biar input draft cepat.
-      if (pk.target !== "me") {
-        for (var k = pk.target + 1; k < state.enemies.length; k++) if (!state.enemies[k].hero) { openPicker(k); return; }
+      if (typeof tgt === "number") {
+        for (var k = tgt + 1; k < state.enemies.length; k++) if (!state.enemies[k].hero) { openPicker(k); return; }
       }
     });
     $("rank-chips").addEventListener("click", function (ev) {

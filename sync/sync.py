@@ -259,8 +259,9 @@ def fetch_stats():
 
 
 def build_counters(stats, valid_ids):
-    """Ringkas jadi {hero: {rank: {wr, s: [[lawan, adv]], w: [[lawan, adv]]}}} + win/ban rate."""
+    """Ringkas jadi {hero: {rank: {wr, s/w: [[lawan, adv]], t: [[teman, adv]]}}} + win/ban rate."""
     src = (stats or {}).get("counters") or {}
+    mates = (stats or {}).get("teammates") or {}  # sinergi: teman yang menaikkan win rate
     out = {}
     for hid, by_rank in src.items():
         if hid not in valid_ids or not isinstance(by_rank, dict):
@@ -272,7 +273,8 @@ def build_counters(stats, valid_ids):
                 continue
             pair = lambda lst: [[x["slug"], x["advantage"]] for x in (lst or [])
                                 if x.get("slug") in valid_ids and isinstance(x.get("advantage"), (int, float))]
-            row[rk] = {"wr": b.get("winRate"), "s": pair(b.get("strong")), "w": pair(b.get("weak"))}
+            row[rk] = {"wr": b.get("winRate"), "s": pair(b.get("strong")), "w": pair(b.get("weak")),
+                       "t": pair((mates.get(hid) or {}).get(rk))}
         if row:
             out[hid] = row
     rk = (stats or {}).get("rankings") or {}

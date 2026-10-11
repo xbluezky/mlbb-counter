@@ -87,7 +87,8 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
 .row { display: grid; grid-template-columns: 58px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 9px 14px; }
-.side.red .row + .row { border-top: 1px solid var(--line); }
+.side.red .row + .row, #ally-rows .row + .row { border-top: 1px solid var(--line); }
+#ally-rows .row { grid-template-columns: 58px minmax(0, 1fr); }
 .lane-tag { font-family: var(--f-display); font-weight: 600; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .pick { display: flex; align-items: center; gap: 10px; min-width: 0; text-align: left; border: 1px dashed var(--line); background: transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; width: 100%; }
 .pick.filled { border-style: solid; background: var(--panel-2); }
@@ -196,6 +197,10 @@ dialog::backdrop { background: rgb(5 8 18 / .55); }
         <div class="side-head"><h2>Hero lu</h2><small id="me-arch"></small></div>
         <div class="lanes" id="me-lanes" role="group" aria-label="Role lu"></div>
         <div class="row me-row"><button class="pick" id="me-pick" type="button"></button></div>
+      </div>
+      <div class="side blue">
+        <div class="side-head"><h2>Tim lu</h2><small id="team-sum">Opsional, buat sinergi &amp; keseimbangan tim</small></div>
+        <div id="ally-rows"></div>
       </div>
       <div class="side red">
         <div class="side-head"><h2>Lawan</h2><small>Tap <b>FED</b> kalau ada yang lagi gendut</small></div>

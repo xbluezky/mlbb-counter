@@ -22,7 +22,16 @@ Begitu hero lawan diisi, panel **Rekomendasi pick** menampilkan 6 hero terbaik u
 - **Aturan komposisi**: misalnya hero ber-CC dapat nilai tambah lawan tim diver, hero damage konsisten lawan tim tanky.
 - **Win rate patch** hero itu sebagai pemberat kecil.
 
-Tap kandidat untuk langsung pakai hero itu; build item ikut menyesuaikan. Komposisi tim sendiri belum dihitung.
+Tap kandidat untuk langsung pakai hero itu; build item ikut menyesuaikan.
+
+### Tim lu
+
+Panel **Tim lu** (opsional) berisi 4 teman di lane selain lane lu. Dipakai untuk:
+
+- **Sinergi statistik**: kandidat yang win rate-nya naik kalau main bareng teman lu dapat nilai tambah (data `t` di `counters.json`).
+- **Keseimbangan tim** (minimal 2 teman terisi): tim berat fisik → kandidat magic dinaikkan (dan sebaliknya), tim tanpa frontline → tank dinaikkan, tim tanpa CC → hero ber-CC dinaikkan.
+- **Build**: kalau 3+ teman terisi dan tidak ada frontline, carry dapat satu slot defensif tambahan.
+- Hero yang sudah dipakai teman tidak muncul di rekomendasi dan tidak bisa dipilih lagi.
 
 ## Struktur
 

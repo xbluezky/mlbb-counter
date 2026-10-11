@@ -125,7 +125,9 @@
     });
 
     var isCarry = kind === "carry_phys" || kind === "carry_magic";
-    var defCap = isCarry ? (p.fed > 0 ? 2 : 1) : kind.indexOf("bruiser") === 0 ? 2 : 9;
+    var team = teamProfile(opts.allies);
+    var noFront = team.n >= 3 && team.front === 0;
+    var defCap = isCarry ? (p.fed > 0 || noFront ? 2 : 1) : kind.indexOf("bruiser") === 0 ? 2 : 9;
     var defUsed = 0; // jumlah item defensif yang DITAMBAHKAN lewat swap
 
     var applied = [];
@@ -205,6 +207,10 @@
     if (lane === "roam") notes.push("Roam: pasang blessing roam di boots.");
     if (p.trueDmg >= 2) notes.push("Lawan punya banyak true damage; def biasa kurang ngefek, utamakan HP.");
     if (p.poke >= 3) notes.push("Komposisi lawan poke. Main dari semak & cari engage cepat.");
+    if (noFront && kind !== "frontline" && kind !== "support")
+      notes.push("Tim lu nggak punya frontline. Slot defensif ditambah satu; jangan maju duluan pas war.");
+    if (team.n >= 3 && team.heal === 0 && (kind === "frontline" || kind === "bruiser_phys" || kind === "bruiser_magic"))
+      notes.push("Tim tanpa healer: item ber-sustain (Oracle, lifesteal) lebih berharga.");
     if (enemies.length < 5) notes.push("Baru " + enemies.length + " dari 5 lawan diisi. Rekomendasi makin akurat kalau lengkap.");
 
     return { arch: arch, kind: kind, profile: p, slots: slots, applied: applied, notes: notes };
@@ -239,6 +245,36 @@
     return vals.reduce(function (x, y) { return x + y; }, 0) / vals.length;
   }
 
+  // Sinergi (%) A dan B satu tim. Positif = win rate naik kalau main bareng.
+  function synergy(C, a, b, rank) {
+    if (!C || !C.heroes) return null;
+    function row(id) { var h = C.heroes[id]; return h && (h[rank] || h.all) || null; }
+    var vals = [], ra = row(a), rb = row(b), i;
+    if (ra && ra.t) for (i = 0; i < ra.t.length; i++) if (ra.t[i][0] === b) vals.push(ra.t[i][1]);
+    if (rb && rb.t) for (i = 0; i < rb.t.length; i++) if (rb.t[i][0] === a) vals.push(rb.t[i][1]);
+    if (!vals.length) return null;
+    return vals.reduce(function (x, y) { return x + y; }, 0) / vals.length;
+  }
+
+  // Ringkasan komposisi tim sendiri.
+  function teamProfile(allies) {
+    var t = { n: 0, phys: 0, magic: 0, front: 0, cc: 0, heal: 0 };
+    (allies || []).forEach(function (a) {
+      if (!a || !a.hero) return;
+      var h = a.hero, tg = h.tags || [], roles = h.roles || [];
+      t.n += 1;
+      var ph = h.dmg === "phys" ? 1 : h.dmg === "mixed" ? 0.5 : 0;
+      var w = roles.indexOf("Tank") >= 0 || roles.indexOf("Support") >= 0 ? 0.5 : 1;
+      t.phys += ph * w; t.magic += (1 - ph) * w;
+      if (tg.indexOf("tank") >= 0 || roles.indexOf("Tank") >= 0) t.front += 1;
+      if (tg.indexOf("cc") >= 0) t.cc += 1;
+      if (tg.indexOf("heal") >= 0 && roles.indexOf("Support") >= 0) t.heal += 1;
+    });
+    var tot = t.phys + t.magic;
+    t.physShare = tot ? t.phys / tot : 0.5;
+    return t;
+  }
+
   function winRate(C, id, rank) {
     if (!C) return null;
     var h = C.heroes && C.heroes[id];
@@ -253,8 +289,11 @@
     var enemies = (opts.enemies || []).filter(function (e) { return e && e.hero; });
     if (!enemies.length) return { picks: [], laneOpp: null };
     var p = profile(enemies);
+    var allies = (opts.allies || []).filter(function (a) { return a && a.hero; });
+    var team = teamProfile(allies);
     var taken = {};
     enemies.forEach(function (e) { taken[e.hero.id] = true; });
+    allies.forEach(function (a) { taken[a.hero.id] = true; });
     var laneOpp = null;
     enemies.forEach(function (e) { if (e.lane === lane) laneOpp = e; });
 
@@ -276,7 +315,32 @@
       });
       score += counterSum;
 
-      // Aturan komposisi (bobot setara ~1% selisih win rate).
+      // Sinergi dengan hero tim sendiri (statistik).
+      allies.forEach(function (a) {
+        var syn = synergy(C, h.id, a.hero.id, rank);
+        if (syn === null) return;
+        score += syn;
+        if (syn >= 0.8) pros.push({ v: syn, t: "Sinergi sama " + a.hero.name + " +" + syn.toFixed(1) + "%" });
+      });
+
+      // Keseimbangan tim sendiri (butuh minimal 2 teman terisi).
+      if (team.n >= 2) {
+        var cPh = h.dmg === "phys" ? 1 : h.dmg === "mixed" ? 0.5 : 0;
+        var isFront = has("tank") || (h.roles || []).indexOf("Tank") >= 0;
+        // Tank/support utama damage-nya kecil, jadi tidak ikut aturan keseimbangan damage.
+        var lowDmg = ["Tank", "Support"].indexOf((h.roles || [])[0]) >= 0;
+        if (lowDmg) { /* lewati */ }
+        else if (team.physShare >= 0.75 && cPh <= 0.5) { score += 1.2; pros.push({ v: 1.2, t: "Tim kurang damage magic" }); }
+        else if (team.physShare <= 0.25 && cPh >= 0.5) { score += 1.2; pros.push({ v: 1.2, t: "Tim kurang damage fisik" }); }
+        else if ((team.physShare >= 0.75 && cPh === 1) || (team.physShare <= 0.25 && cPh === 0)) {
+          score -= 0.6; cons.push({ v: -0.6, t: "Damage tim jadi berat sebelah" });
+        }
+        if (team.front === 0 && isFront) { score += 1.4; pros.push({ v: 1.4, t: "Tim belum punya frontline" }); }
+        if (team.front >= 2 && isFront && !has("dps") && !has("burst")) { score -= 0.5; cons.push({ v: -0.5, t: "Tim udah punya 2 frontline" }); }
+        if (team.cc === 0 && has("cc")) { score += 0.6; pros.push({ v: 0.6, t: "Tim belum punya CC" }); }
+      }
+
+      // Aturan komposisi lawan (bobot setara ~1% selisih win rate).
       if (p.tank >= 2 && (has("dps") || has("true"))) { score += 1; pros.push({ v: 1, t: "Damage konsisten lawan tim tanky" }); }
       if (p.dive >= 2 && has("cc")) { score += 1; pros.push({ v: 1, t: "Punya CC buat ngunci diver lawan" }); }
       if (p.heal + p.shield >= 2 && has("burst")) { score += 0.6; pros.push({ v: 0.6, t: "Burst nembus sustain lawan" }); }
@@ -294,11 +358,11 @@
         cons: cons.slice(0, 2).map(function (x) { return x.t; }) };
     }).sort(function (a, b) { return b.score - a.score; });
 
-    return { picks: picks.slice(0, opts.limit || 6), laneOpp: laneOpp, total: picks.length };
+    return { picks: picks.slice(0, opts.limit || 6), laneOpp: laneOpp, total: picks.length, team: team };
   }
 
   var api = { LANES: LANES, LANE_LABEL: LANE_LABEL, TAG_LABEL: TAG_LABEL, profile: profile, recommend: recommend,
-    recommendPicks: recommendPicks, matchup: matchup, level: level };
+    recommendPicks: recommendPicks, matchup: matchup, synergy: synergy, teamProfile: teamProfile, level: level };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.CounterEngine = api;
 })(this);
