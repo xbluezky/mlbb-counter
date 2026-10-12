@@ -615,6 +615,25 @@
   "img": "https://mlbbdex.com/visuels/heros/diggie/icone.webp"
  },
  {
+  "id": "dori",
+  "name": "Dori",
+  "lanes": [
+   "mid"
+  ],
+  "roles": [
+   "Mage"
+  ],
+  "dmg": "magic",
+  "tags": [
+   "burst",
+   "poke"
+  ],
+  "arch": "mage_burst",
+  "img": "https://mlbbdex.com/visuels/heros/dori/icone.webp",
+  "source": "sync",
+  "review": true
+ },
+ {
   "id": "dyrroth",
   "name": "Dyrroth",
   "lanes": [
