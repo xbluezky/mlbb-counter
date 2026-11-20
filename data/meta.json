@@ -1,13 +1,11 @@
 {
- "patch": "2.2.16",
- "patch_date": null,
- "synced_at": "2026-11-19T02:32:12+00:00",
+ "patch": "2.2.23",
+ "patch_date": "2026-11-11",
+ "synced_at": "2026-11-20T02:17:40+00:00",
  "source": "https://mlbbdex.com (Mobile Legends Wiki, CC BY-SA)",
  "note": "Data awal disusun manual. Jalankan sync/sync.py di server untuk menarik roster & item terbaru.",
  "new_heroes": [
   "Dori"
  ],
- "missing_items": [
-  "valkyries_shield"
- ]
+ "missing_items": []
 }
